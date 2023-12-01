@@ -1,7 +1,7 @@
 "use client";
 
-import { ThemeProvider, useTheme } from "next-themes";
-import Image from "next/image";
+import { TernaryPlot } from "@/components/TernaryPlot/TernaryPlot";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 
 const projects = [
@@ -61,25 +61,27 @@ export default function Home() {
             <div className="h-3 w-3 rounded-full bg-gradient-to-br from-blue-700 dark:from-teal-400 via-rose-600 dark:via-blue-600 to-yellow-400 dark:to-yellow-200"></div>
           </h2>
         </header>
-        <section className="text-lg font-light text-zinc-700 dark:text-zinc-200">
+        <section className="text-xl font-light text-zinc-700 dark:text-zinc-300">
           Hi — I&apos;m Rowland, a Software Engineer interested in Data
           Visualisation. I connect data, design and technology to build apps
           that explore and visualise complex information.
         </section>
         <section className="font-light space-y-2 text-zinc-700">
           <h1 className="font-medium text-zinc-900 dark:text-zinc-200">
-            Projects
+            Projects (Stuff)
           </h1>
           <div className="divide-y dark:divide-zinc-700">
             {projects.map(({ name, url, description }) => (
               <div key={name} className="text-sm space-y-2 py-4">
-                <a
-                  href={url}
-                  target="_blank"
-                  className="underline font-normal underline-offset-[3px] dark:text-zinc-300"
-                >
-                  {name}
-                </a>
+                <div className="flex items-center justify-between">
+                  <a
+                    href={url}
+                    target="_blank"
+                    className="underline font-normal underline-offset-[3px] dark:text-zinc-300"
+                  >
+                    {name}
+                  </a>
+                </div>
                 <p className="dark:text-zinc-400">{description}</p>
               </div>
             ))}
@@ -98,6 +100,7 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <TernaryPlot />
       </article>
     </main>
   );

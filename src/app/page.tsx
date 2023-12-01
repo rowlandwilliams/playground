@@ -68,7 +68,7 @@ export default function Home() {
         </section>
         <section className="font-light space-y-2 text-zinc-700">
           <h1 className="font-medium text-zinc-900 dark:text-zinc-200">
-            Projects (Stuff)
+            Projects
           </h1>
           <div className="divide-y dark:divide-zinc-700">
             {projects.map(({ name, url, description }) => (

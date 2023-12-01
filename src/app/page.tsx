@@ -61,7 +61,7 @@ export default function Home() {
             <div className="h-3 w-3 rounded-full bg-gradient-to-br from-blue-700 dark:from-teal-400 via-rose-600 dark:via-blue-600 to-yellow-400 dark:to-yellow-200"></div>
           </h2>
         </header>
-        <section className="text-xl font-light text-zinc-700 dark:text-zinc-300">
+        <section className="text-2xl font-light text-zinc-900 dark:text-zinc-100">
           Hi — I&apos;m Rowland, a Software Engineer interested in Data
           Visualisation. I connect data, design and technology to build apps
           that explore and visualise complex information.

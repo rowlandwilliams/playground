@@ -10,7 +10,7 @@ export const BioText = () => {
           that explore and visualise complex information.
         </p>
         <p className="text-base font-light text-zinc-500 dark:text-zinc-400">
-          I currently lead the Engineering team at{" "}
+          I lead the Engineering team at{" "}
           <Link
             href="https://www.kulea.com/"
             target="_blank"
@@ -18,7 +18,7 @@ export const BioText = () => {
           >
             kulea
           </Link>
-          , a start-up providing data, insights and infrastructure
+          , a Nairobi start-up providing data, insights and infrastructure
           for agricultural trading. I also like making{" "}
           <Link
             href="/art"
@@ -48,7 +48,7 @@ export const BioText = () => {
           visualise complex information.
         </p>
         <p className="text-lg sm:text-xl font-light text-zinc-500 dark:text-zinc-400">
-          I currently lead the Engineering team at{" "}
+          I lead the Engineering team at{" "}
           <Link
             href="https://www.kulea.com/"
             target="_blank"
@@ -56,7 +56,7 @@ export const BioText = () => {
           >
             kulea
           </Link>
-          , a start-up providing data, insights and infrastructure
+          , a Nairobi start-up providing data, insights and infrastructure
           for agricultural trading. I also like making{" "}
           <Link
             href="/art"

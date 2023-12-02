@@ -12,7 +12,7 @@ export default function Home() {
         <BioText />
         <Projects />
         <Playground />
-        <TernaryPlot />
+        
       </article>
     </main>
   );

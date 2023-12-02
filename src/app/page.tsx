@@ -56,15 +56,25 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <h2 className="text-xs flex items-center text-zinc-600 dark:text-zinc-400 font-light gap-x-2 ">
+          <h2 className="text-sm flex items-center text-zinc-600 dark:text-zinc-400 font-light gap-x-2 ">
             Design Technologist
             <div className="h-3 w-3 rounded-full bg-gradient-to-br from-blue-700 dark:from-teal-400 via-rose-600 dark:via-blue-600 to-yellow-400 dark:to-yellow-200"></div>
           </h2>
         </header>
-        <section className="text-2xl font-light text-zinc-900 dark:text-zinc-100">
+        <section className="text-2xl hidden sm:block font-light text-zinc-900 dark:text-zinc-100">
           Hi — I&apos;m Rowland, a Software Engineer interested in Data
           Visualisation. I connect data, design and technology to build apps
           that explore and visualise complex information.
+        </section>
+        <section className="sm:hidden text-3xl space-y-8  text-zinc-900 dark:text-zinc-100">
+          <p>
+            Hi — I&apos;m Rowland, a Software Engineer interested in Data
+            Visualisation.
+          </p>
+          <p className="text-2xl font-light text-zinc-500">
+            I connect data, design and technology to build apps that explore and
+            visualise complex information.
+          </p>
         </section>
         <section className="font-light space-y-2 text-zinc-700">
           <h1 className="font-medium text-zinc-900 dark:text-zinc-200">

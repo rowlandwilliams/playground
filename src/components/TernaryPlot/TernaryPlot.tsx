@@ -15,7 +15,7 @@ export const TernaryPlot = () => {
     <section>
       <div
         ref={ref}
-        className="flex mx-auto max-w-[400px] justify-center items-center"
+        className="flex mx-auto max-w-[300px] brder justify-center items-center"
       >
         <svg
           height={trianglePlotDim + padding}

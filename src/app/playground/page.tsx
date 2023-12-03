@@ -1,3 +1,5 @@
+import Sankey from "@/components/Sankey/Sankey";
+
 export default function Playground() {
-    return <div>suh</div>
+  return <Sankey />;
 }

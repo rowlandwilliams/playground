@@ -37,7 +37,7 @@ export const Project = ({
               {name}
             </a>
             {isCurrent && (
-              <p className="text-xs flex gap-x-1 items-center px-3 rounded-full bg-indigo-600 dark:bg-green-400 py-[1px] text-indigo-600 dark:text-green-400 bg-opacity-20 dark:bg-opacity-20 font-normal">
+              <p className="text-[10px] flex gap-x-1 items-center px-3 rounded-full bg-indigo-600 dark:bg-green-400 text-indigo-600 dark:text-green-400 bg-opacity-20 dark:bg-opacity-20 font-medium">
                 <svg
                   width="10"
                   height="10"

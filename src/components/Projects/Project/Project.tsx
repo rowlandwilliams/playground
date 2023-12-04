@@ -1,4 +1,6 @@
+import { Arrow } from "@/components/SHARED/Arrow";
 import classNames from "classnames";
+import Link from "next/link";
 import { Dispatch, ReactNode } from "react";
 
 interface Props {
@@ -90,6 +92,14 @@ export const Project = ({
               ))}
             </div>
           </section>
+          <div>
+            <Link
+              href={`/project/${name}`}
+              className="flex font-normal text-teal-500 dark:text-violet-400 text-xs items-center gap-x-1"
+            >
+              Read more <Arrow dimension={8} />
+            </Link>
+          </div>
         </div>
       )}
     </section>

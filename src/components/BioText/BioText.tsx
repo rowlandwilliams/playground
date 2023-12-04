@@ -3,7 +3,7 @@ import Link from "next/link";
 export const BioText = () => {
   return (
     <>
-      <section className="text-xl space-y-8 hidden sm:block font-light text-zinc-900 dark:text-zinc-100">
+      <section className="text-xl space-y-8 hidden sm:block mt-2 font-light text-zinc-900 dark:text-zinc-100">
         <p className="text-2xl">
           Hi — I&apos;m Rowland, a Software Engineer interested in Data
           Visualisation.

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Sankey from "../Sankey/Sankey";
 
 export const Playground = () => {
   return (
@@ -10,10 +11,8 @@ export const Playground = () => {
       >
         Playground
       </Link>
-      <div className="grid grid-cols-3 gap-4">
-        {[...Array(3)].map((item, i) => (
-          <div key={i} className="h-20 bg-indigo-500 rounded-sm"></div>
-        ))}
+      <div className="w-full h-[500px]">
+        <Sankey />
       </div>
     </section>
   );

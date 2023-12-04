@@ -1,0 +1,14 @@
+fragment AllDesignProjectFields on DesignProject {
+  _id
+  name
+  summary
+  color
+  slug {
+    current
+  }
+  mainImage {
+    asset {
+      url
+    }
+  }
+}

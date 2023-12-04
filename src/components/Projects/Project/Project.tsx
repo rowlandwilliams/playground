@@ -94,7 +94,7 @@ export const Project = ({
           </section>
           <div>
             <Link
-              href={`/project/${name}`}
+              href={`/projects/${name}`}
               className="flex font-normal text-teal-500 dark:text-violet-400 text-xs items-center gap-x-1"
             >
               Read more <Arrow dimension={8} />

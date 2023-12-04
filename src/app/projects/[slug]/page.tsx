@@ -1,9 +1,25 @@
-import { BioText } from "@/components/BioText/BioText";
-import { Navbar } from "@/components/Navbar/Navbar";
-import { Projects } from "@/components/Projects/Projects";
-import { Playground } from "@/components/Playground/Playground";
-import { TernaryPlot } from "@/components/TernaryPlot/TernaryPlot";
+import { ProjectImages } from "@/components/ProjectImages/ProjectImages";
+import { ProjectDocument } from "@/graphql/generated";
+import { getUrqlClient } from "@/lib/urql";
+import Image from "next/image";
 
-export default function Project({ params }: { params: { slug: string } }) {
-  return <div>My Post: {params.slug}</div>;
+async function getProjectByName(projectName: string) {
+  const { client } = getUrqlClient();
+  const result = await client.query(ProjectDocument, { projectName });
+  return result;
+}
+
+export default async function Project({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { data, error } = await getProjectByName(params.slug);
+
+  const projectImages = data?.allProject[0].projectImages;
+  return (
+    <div>
+      <ProjectImages projectImages={projectImages} />
+    </div>
+  );
 }

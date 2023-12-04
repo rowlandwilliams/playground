@@ -38,7 +38,7 @@ const projects = [
     isCurrent: true,
   },
   {
-    name: "supernova",
+    name: "Supernova",
     url: "https://www.supernova.ai/",
     description: "Illuminating the sustainable investing universe.",
     body: (

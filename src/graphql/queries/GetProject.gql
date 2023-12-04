@@ -1,5 +1,5 @@
-query Project($projectId: ID!) {
-  Project(id: $projectId) {
+query Project($projectName: String!) {
+  allProject(where: { name: { eq: $projectName } }) {
     ...ProjectFields
   }
 }

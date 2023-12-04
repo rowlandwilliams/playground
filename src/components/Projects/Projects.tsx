@@ -11,17 +11,26 @@ const projects = [
     description: "Africa's Commodity Intelligence Platform.",
     body: (
       <>
-        I currently lead the Engineering team at{" "}
-        <Link
-          href="https://www.kulea.com/"
-          target="_blank"
-          className="text-zinc-600 dark:text-zinc-200 underline underline-offset-4"
-        >
-          kulea
-        </Link>
-        , a Nairobi start-up providing data, insights and infrastructure for
-        agricultural trading. I write alot of code, manage a team of engineers
-        and oversee development of a product backed by a $1 million seed round.
+        <p>
+          I currently lead the Engineering team at{" "}
+          <Link
+            href="https://www.kulea.com/"
+            target="_blank"
+            className="text-zinc-600 dark:text-zinc-200 underline underline-offset-4"
+          >
+            kulea
+          </Link>
+          , a Nairobi-based start-up providing data, insights and infrastructure
+          for agricultural commodity trading.{" "}
+          <span className="hidden sm:inline">
+            I write alot of code, manage a team of engineers and oversee
+            development of a product backed by a $1 million seed round.
+          </span>
+        </p>
+        <p className="sm:hidden">
+          I write alot of code, manage a team of engineers and oversee
+          development of a product backed by a $1 million seed round.
+        </p>
       </>
     ),
     tech: ["Next.js", "d3.js", "TypeScript", "GraphQL", "PostgreSQL", "AWS"],

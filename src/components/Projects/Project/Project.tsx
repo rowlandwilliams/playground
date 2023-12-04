@@ -74,7 +74,7 @@ export const Project = ({
       </div>
       {active && (
         <div className="py-8 sm:py-4 text-[13px] space-y-8 sm:space-y-4 font-light text-zinc-600 dark:text-zinc-400">
-          <p className="leading-normal text-sm sm:text-[13px]">{body}</p>
+          <div className="leading-normal text-sm sm:text-[13px] space-y-2">{body}</div>
           <section className="space-y-4 sm:space-y-4">
             <div>
               Role: <span className="dark:text-zinc-300">{role}</span>

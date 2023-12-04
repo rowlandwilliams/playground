@@ -3,6 +3,8 @@
 import { TernaryPlotOuterTriangle } from "./TernaryPlotOuterTriangle/TernaryPlotOuterTriangle";
 import { TernaryPlotBaseTriangles } from "./TernaryPlotBaseTriangles/TernaryPlotBaseTriangles";
 import { useResponsiveGraphDims } from "@/hooks/useResponsiveGraphWidth";
+import { TernaryPlotLabels } from "./TernaryPlotLabels/TernaryPlotLabels";
+import { TernaryPlotPoint } from "./TernaryPlotPoint/TernaryPlotPoint";
 
 export const TernaryPlot = () => {
   const { ref, graphWidth } = useResponsiveGraphDims();
@@ -43,46 +45,16 @@ export const TernaryPlot = () => {
               triangleClass="fill-transparent stroke-indigo-400"
             />
           </g>
-          <g className="text-xs">
-            <text
-              x={half}
-              y={-labelOffset}
-              className="fill-zinc-600 dark:fill-white"
-              text-anchor="middle"
-              dominant-baseline="hanging"
-              transform={`translate(${padding / 2},20)`}
-            >
-              Developer
-            </text>
-            <text
-              className="fill-zinc-600 dark:fill-white"
-              x={trianglePlotDim + padding - 5}
-              y={trianglePlotDim + padding - labelOffset}
-              text-anchor="end"
-            >
-              Artist
-            </text>
-            <text
-              className="fill-zinc-600 dark:fill-white"
-              x={0}
-              y={trianglePlotDim + padding - labelOffset}
-              text-anchor="start"
-              transform={`translate(${padding / 2},0})`}
-            >
-              Designer
-            </text>
-          </g>
-          <circle
-            className="dark:fill-none stroke-zinc-300 fill-indigo-200 dark:animate-pulse"
-            r={8}
-            cx={half + padding + 1}
-            cy={half - padding / 2}
+          <TernaryPlotLabels
+            half={half}
+            labelOffset={labelOffset}
+            padding={padding}
+            trianglePlotDim={trianglePlotDim}
           />
-          <circle
-            className="fill-teal-500 animate-pulse dark:animate-none"
-            r={4}
-            cx={half + padding + 1}
-            cy={half - padding / 2}
+          <TernaryPlotPoint
+            half={half}
+            padding={padding}
+            trianglePlotDim={trianglePlotDim}
           />
         </svg>
       </div>

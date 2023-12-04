@@ -3,11 +3,14 @@ import Link from "next/link";
 export const BioText = () => {
   return (
     <>
-      <section className="text-2xl space-y-8 hidden sm:block font-light text-zinc-900 dark:text-zinc-100">
-        <p>
+      <section className="text-xl space-y-8 hidden sm:block font-light text-zinc-900 dark:text-zinc-100">
+        <p className="text-2xl">
           Hi — I&apos;m Rowland, a Software Engineer interested in Data
-          Visualisation. I connect data, design and technology to build apps
-          that explore and visualise complex information. I also like making{" "}
+          Visualisation.
+        </p>
+        <p className="text-zinc-600 dark:text-zinc-400 text-base lg:text-base">
+          I connect data, design and technology to build apps that explore and
+          visualise complex information. I also like making{" "}
           <Link
             href="/art"
             target="_blank"
@@ -35,7 +38,6 @@ export const BioText = () => {
           I connect data, design and technology to build apps that explore and
           visualise complex information.
         </p>
-       
       </section>
     </>
   );

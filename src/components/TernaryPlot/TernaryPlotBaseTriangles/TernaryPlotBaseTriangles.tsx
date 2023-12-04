@@ -9,7 +9,7 @@ export const TernaryPlotBaseTriangles = ({
   plotDim,
   nTriangles,
   half,
-  strokeClass = "stroke-zinc-400 dark:stroke-gray-700 stroke-[0.5px]",
+  strokeClass = "stroke-zinc-300 dark:stroke-gray-700 stroke-[0.5px]",
 }: Props) => {
   const trianglePlotDim = plotDim / nTriangles;
   const numbers = [...Array(nTriangles)];

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Sankey from "../Sankey/Sankey";
+import { ClusterAnalysis } from "../ClusterAnalysis/ClusterAnalysis";
 
 export const Playground = () => {
   return (
@@ -11,9 +12,14 @@ export const Playground = () => {
       >
         Playground
       </Link>
-      <div className="w-full h-[500px]">
-        <Sankey />
-      </div>
+      <section className="space-y-4">
+        <div className="w-full h-[500px]">
+          <ClusterAnalysis />
+        </div>
+        <div className="w-full h-[500px] border  border-zinc-800  p-5">
+          <Sankey />
+        </div>
+      </section>
     </section>
   );
 };

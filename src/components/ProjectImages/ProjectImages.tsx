@@ -40,18 +40,23 @@ export const ProjectImages = ({ projectImages }: Props) => {
         )}
       </div>
       {graphWidth > 0 && (
-        <div className="flex gap-x-2">
-          {projectImages?.map((image, i) => (
-            <button
-              onClick={() => setActiveImage(i)}
-              key={image?.caption}
-              className={classNames("w-[10px] h-[10px] rounded-full ", {
-                "bg-indigo-600": activeImage === i,
-                "bg-zinc-600": activeImage !== i,
-              })}
-            />
-          ))}
-        </div>
+        <section className="flex justify-between items-center">
+          <div className="flex gap-x-2">
+            {projectImages?.map((image, i) => (
+              <button
+                onClick={() => setActiveImage(i)}
+                key={image?.caption}
+                className={classNames("w-[10px] h-[10px] rounded-full ", {
+                  "bg-indigo-600": activeImage === i,
+                  "bg-zinc-300 dark:bg-zinc-600": activeImage !== i,
+                })}
+              />
+            ))}
+          </div>
+          <div className="text-zinc-700 text-xs dark:text-zinc-400">
+            {projectImages[activeImage]?.caption}
+          </div>
+        </section>
       )}
     </section>
   ) : null;

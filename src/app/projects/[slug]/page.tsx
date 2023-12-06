@@ -22,7 +22,7 @@ export default async function Project({
       <div className="flex items-center gap-x-1.5 text-sm">
         <Link
           href="/"
-          className="underline underline-offset-4 font-normal text-zinc-900 dark:text-zinc-300"
+          className="underline underline-offset-4 font-normal text-zinc-700 dark:text-zinc-300"
         >
           Projects
         </Link>

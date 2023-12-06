@@ -7,7 +7,7 @@ export default function ProjectsLayout({
 }) {
   return (
     <main className="flex px-8 flex-col items-center my-12 text-zinc-600">
-      <article className="w-full max-w-[700px] space-y-20">
+      <article className="w-full max-w-[700px] space-y-12">
         <Navbar />
         {children}
       </article>

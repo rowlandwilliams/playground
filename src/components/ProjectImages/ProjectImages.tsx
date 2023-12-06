@@ -24,19 +24,19 @@ export const ProjectImages = ({ projectImages }: Props) => {
 
   const { graphWidth, ref } = useResponsiveGraphDims();
 
-  console.log(width, height, aspectRatio);
-
   return (
     <section className="space-y-2">
       {projectImages && projectImages[activeImage] ? (
         <div ref={ref} key={projectImages[activeImage]?.image?.asset?.url}>
-          <Image
-            src={projectImages[activeImage]?.image?.asset?.url}
-            width={graphWidth}
-            height={graphWidth * aspectRatio}
-            alt=""
-            className="object-contain object-top rounded-sm"
-          />
+          {projectImages[activeImage]?.image?.asset?.url && (
+            <Image
+              src={projectImages[activeImage]?.image?.asset?.url}
+              width={graphWidth}
+              height={graphWidth * aspectRatio}
+              alt=""
+              className="object-contain object-top rounded-sm"
+            />
+          )}
         </div>
       ) : null}
       <div className="flex gap-x-2">

@@ -11,7 +11,7 @@ export default function Home() {
         <Navbar />
         <div className="grid grid-cols-1 sm:grid-cols-2">
           <BioText />
-          <div className="hidden sm:flex sm:justify-end">
+          <div className="hidden sm:flex sm:justify-end min-h-[300px]">
             <TernaryPlot />
           </div>
         </div>

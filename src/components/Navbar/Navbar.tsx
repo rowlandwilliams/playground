@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { ThemeToggle } from "./ThemeToggle/ThemeToggle";
+import Link from "next/link";
 
 export const Navbar = () => {
   const { setTheme, theme } = useTheme();
@@ -9,9 +10,12 @@ export const Navbar = () => {
   return (
     <header>
       <div className="flex justify-between items-center">
-        <h1 className="flex gap-x-2 items-center py-2  dark:text-zinc-100 text-lg text-zinc-900 font-medium ">
+        <Link
+          href="/"
+          className="flex gap-x-2 items-center py-2  dark:text-zinc-100 text-lg text-zinc-900 font-medium "
+        >
           Rowland Williams
-        </h1>
+        </Link>
         <div className="flex gap-x-2 items-center">
           <div className="hover:bg-zinc-100 dark:hover:bg-zinc-600 h-6 w-6 flex items-center justify-center rounded-sm">
             <svg

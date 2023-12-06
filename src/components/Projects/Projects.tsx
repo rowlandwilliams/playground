@@ -83,7 +83,12 @@ export const Projects = () => {
 
   return (
     <section className="font-light text-zinc-700">
-      <h1 className="font-medium text-zinc-900 dark:text-zinc-200">Projects</h1>
+      <Link
+        href="/projects"
+        className="font-medium text-zinc-900 dark:text-zinc-200"
+      >
+        Projects
+      </Link>
       <div className="divide-y dark:divide-zinc-700">
         {projects.map((project, i) => (
           <Project

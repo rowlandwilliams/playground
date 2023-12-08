@@ -19,15 +19,15 @@ export default async function Project({
   const projectImages = data?.allProject[0].projectImages;
   return (
     <div className="space-y-4">
-      <div className="flex items-center gap-x-1.5 text-sm">
+      <div className="flex items-center gap-x-1.5 text-xs text-zinc-700 dark:text-zinc-300">
         <Link
-          href="/"
-          className="underline underline-offset-4 font-normal text-zinc-700 dark:text-zinc-300"
+          href="/projects"
+          className="underline underline-offset-4 font-normal "
         >
           Projects
         </Link>
         <span>/</span>
-        <div className="text-zinc-600 dark:text-zinc-400">{params.slug}</div>
+        <div>{params.slug}</div>
       </div>
       <ProjectImages projectImages={projectImages} />
     </div>

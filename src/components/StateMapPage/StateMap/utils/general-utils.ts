@@ -2,7 +2,7 @@ import randomColor from "randomcolor";
 
 export const l4Column = "US_L4CODE";
 
-export const generateColor = (luminosityString, colorString) => {
+export const generateColor = (luminosityString: any, colorString: any) => {
   return randomColor({
     luminosity: luminosityString,
     hue: colorString,

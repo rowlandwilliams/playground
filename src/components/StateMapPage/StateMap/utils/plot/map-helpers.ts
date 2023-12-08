@@ -2,7 +2,6 @@ import { select, geoMercator, geoPath } from "d3";
 import { feature, merge, mesh } from "topojson-client";
 import { caliData } from "../../data/caliData";
 import { mexicoOutline } from "../../data/mexicoOutline";
-import { usData } from "../../data/usData";
 import { usMexico } from "../../data/usMexico";
 import { usStatesInnerOutlines } from "../../data/usStatesInnerOutlines";
 import { l4Colors } from "../polygon-colors";
@@ -18,8 +17,7 @@ import {
   stateCream,
 } from "../general-utils";
 import { caliRivers } from "../../data/caliRivers";
-import { store } from "../../../../../index";
-import { setStateMapIsHovered, setTooltipData } from "../../../../../actions";
+import useCaliMapStore from "@/store/cali-map";
 
 // get statemap selections
 export const getMapSelections = () => {
@@ -128,8 +126,8 @@ export const setStateMapMouseInteraction = () => {
   const stateMapGroup = select("#state-map-group");
 
   stateMapGroup
-    .on("mouseenter", () => store.dispatch(setStateMapIsHovered(true)))
-    .on("mouseleave", () => store.dispatch(setStateMapIsHovered(false)));
+    .on("mouseenter", () => useCaliMapStore().setStateMapIsHovered(true))
+    .on("mouseleave", () => useCaliMapStore().setStateMapIsHovered(false));
 };
 
 // plot level 4 polygons
@@ -165,13 +163,11 @@ export const plotLevel4Polygons = (l4Group, polygons, pathGenerator) => {
       event.currentTarget.setAttribute("stroke-opacity", 0.6);
     })
     .on("mousemove", (event, d) => {
-      store.dispatch(
-        setTooltipData(
-          [event.pageX, event.pageY],
-          d.properties,
-          l4Colors.filter((color) => color.code === d.properties[l4Column])[0]
-            .color
-        )
+      useCaliMapStore().setTooltipData(
+        [event.pageX, event.pageY],
+        d.properties,
+        l4Colors.filter((color) => color.code === d.properties[l4Column])[0]
+          .color
       );
     });
 };

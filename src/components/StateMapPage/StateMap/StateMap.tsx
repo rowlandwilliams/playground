@@ -1,14 +1,11 @@
-import { useEffect } from "react";
 import { homeMapDims } from "./utils/general-utils";
-import { drawMap } from "./utils/plot/drawMap";
-import useCaliMapStore from "@/store/cali-map";
 
 export const StateMap = () => {
-  useEffect(() => {
-    drawMap();
-  }, []);
+  // useEffect(() => {
+  //   drawMap();
+  // }, []);
 
-  const { tooltipData } = useCaliMapStore((state) => state);
+  // const { tooltipData } = useCaliMapStore((state) => state);
 
   return (
     <svg width="100%" height={homeMapDims[1]} id="map-svg">
@@ -20,12 +17,12 @@ export const StateMap = () => {
           patternUnits="userSpaceOnUse"
           patternTransform="rotate(45)"
         >
-          <rect
+          {/* <rect
             width="4"
             height="8"
             transform="translate(0,0)"
             fill={tooltipData.activePolygonColor}
-          ></rect>
+          ></rect> */}
         </pattern>
       </defs>
       <g>

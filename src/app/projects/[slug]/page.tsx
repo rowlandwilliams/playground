@@ -1,5 +1,5 @@
 import { DesktopProjectImages } from "@/components/DesktopProjectImages/DesktopProjectImages";
-import { ProjectImages } from "@/components/ProjectImages/ProjectImages";
+import { ProjectPageHeaderAndImages } from "@/components/ProjectPage/ProjectPageHeaderAndImages/ProjectPageHeaderAndImages";
 import { ProjectTemplateOverviewDeliverables } from "@/components/ProjectPage/ProjectTemplateOverviewDeliverables/ProjectTemplateOverviewDeliverables";
 import { ProjectTemplateOverviewLocations } from "@/components/ProjectPage/ProjectTemplateOverviewLocations/ProjectTemplateOverviewLocations";
 import { ProjectTemplateOverviewRole } from "@/components/ProjectPage/ProjectTemplateOverviewRole/ProjectTemplateOverviewRole";
@@ -7,7 +7,9 @@ import { ProjectTemplateOverviewTechnologies } from "@/components/ProjectPage/Pr
 import { ProjectTemplateOverviewTag } from "@/components/ProjectPage/SHARED/ProjectTemplateOverviewTags/ProjectTemplateOverviewTag/ProjectTemplateOverviewTag";
 import { ProjectDocument } from "@/graphql/generated";
 import { getUrqlClient } from "@/lib/urql";
+import classNames from "classnames";
 import Link from "next/link";
+import { useState } from "react";
 
 async function getProjectByName(projectName: string) {
   const { client } = getUrqlClient();
@@ -20,23 +22,17 @@ export default async function Project({
 }: {
   params: { slug: string };
 }) {
+  // const [vertical, setVertical] = useState(false);
   const { data } = await getProjectByName(params.slug);
   const projectImages = data?.allProject[0].projectImages;
   const borderColorClass = `border-${data?.allProject[0].color}`;
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center gap-x-1.5 text-sm">
-        <Link
-          href="/projects"
-          className="underline underline-offset-4 font-normal text-header"
-        >
-          Projects
-        </Link>
-        <span>/</span>
-        <div className="text-zinc-600 dark:text-zinc-400">{params.slug}</div>
-      </div>
-      <DesktopProjectImages projectImages={projectImages} />
+      <ProjectPageHeaderAndImages
+        projectImages={projectImages}
+        slug={params.slug}
+      />
       <ProjectTemplateOverviewRole jobTitle={data?.allProject[0].jobTitle} />
       <ProjectTemplateOverviewTechnologies
         technologies={data?.allProject[0].technologies}

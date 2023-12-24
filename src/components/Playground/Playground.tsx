@@ -8,7 +8,7 @@ export const Playground = () => {
     <section className="font-light space-y-2 text-zinc-700">
       <Link
         href="/playground"
-        className="font-medium text-zinc-900 dark:text-zinc-200"
+        className="font-medium text-zinc-900 text-base dark:text-zinc-200"
       >
         Playground
       </Link>

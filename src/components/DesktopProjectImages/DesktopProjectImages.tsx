@@ -8,9 +8,10 @@ import { useState } from "react";
 
 interface Props {
   projectImages: ProjectFieldsFragment["projectImages"];
+  vertical: boolean;
 }
 
-export const DesktopProjectImages = ({ projectImages }: Props) => {
+export const DesktopProjectImages = ({ projectImages, vertical }: Props) => {
   const url = projectImages ? projectImages[0]?.image?.asset?.url : "";
 
   const match = url?.match(/-(\d+)x(\d+)\./) || "";
@@ -23,19 +24,26 @@ export const DesktopProjectImages = ({ projectImages }: Props) => {
   const { graphWidth, ref } = useResponsiveGraphDims();
 
   return projectImages ? (
-    <section className="space-y-2">
-      <div ref={ref} className="flex gap-x-2 py6 bg-idigo-600 overflow-x-auto">
-        {projectImages.map((image) => (
-          <Image
-            key={image?.image?.asset?.url}
-            src={image?.image?.asset?.url as string}
-            width={graphWidth}
-            height={graphWidth * aspectRatio}
-            alt=""
-            className="object-contain object-top rounded-sm"
-          />
-        ))}
-      </div>
-    </section>
+    <article className="space-y-4">
+      <section className="space-y-2">
+        <div
+          ref={ref}
+          className={classNames("flex gap-4 bg-idigo-600 overflow-x-auto", {
+            "flex-col": vertical,
+          })}
+        >
+          {projectImages.map((image) => (
+            <Image
+              key={image?.image?.asset?.url}
+              src={image?.image?.asset?.url as string}
+              width={graphWidth}
+              height={graphWidth * aspectRatio}
+              alt=""
+              className="object-contain object-top rounded-sm"
+            />
+          ))}
+        </div>
+      </section>
+    </article>
   ) : null;
 };

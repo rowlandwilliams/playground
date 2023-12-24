@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { safeList } from "./tailwind/safeList";
 
 const config: Config = {
   darkMode: "class",
@@ -7,6 +8,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [...safeList],
   theme: {
     extend: {
       backgroundImage: {

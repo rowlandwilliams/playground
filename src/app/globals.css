@@ -19,3 +19,11 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+.text-header {
+  @apply text-zinc-700 dark:text-zinc-300;
+}
+
+.text-body {
+  @apply dark:text-zinc-300;
+}

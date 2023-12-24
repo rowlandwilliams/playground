@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={classNames(
           inter.className,
-          "bg-gray-50 dark:bg-zinc-900 min-h-screen flex flex-col"
+          "bg-gray-50 dark:bg-zinc-900 min-h-screen flex flex-col text-body text-xs"
         )}
       >
         <Providers>{children}</Providers>

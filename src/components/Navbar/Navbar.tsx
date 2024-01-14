@@ -1,14 +1,11 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { ThemeToggle } from "./ThemeToggle/ThemeToggle";
 import Link from "next/link";
 
 export const Navbar = () => {
-  const { setTheme, theme } = useTheme();
-
   return (
-    <header>
+    <header className="max-w-[700px] mx-auto">
       <div className="flex justify-between items-center">
         <Link
           href="/"

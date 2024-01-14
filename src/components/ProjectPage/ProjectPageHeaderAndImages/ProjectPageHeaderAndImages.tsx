@@ -14,7 +14,7 @@ interface Props {
 export const ProjectPageHeaderAndImages = ({ slug, projectImages }: Props) => {
   const [vertical, setVertical] = useState(false);
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 max-w-[700px] mx-auto">
       <header className="flex justify-between">
         <div className="flex items-center gap-x-1.5 text-sm">
           <Link
@@ -24,7 +24,9 @@ export const ProjectPageHeaderAndImages = ({ slug, projectImages }: Props) => {
             Projects
           </Link>
           <span>/</span>
-          <div className="text-zinc-600 dark:text-zinc-400">{slug}</div>
+          <div className="text-zinc-600 dark:text-zinc-400">
+            {decodeURIComponent(slug)}
+          </div>
         </div>
         <button onClick={() => setVertical(!vertical)} className="text-button">
           <svg

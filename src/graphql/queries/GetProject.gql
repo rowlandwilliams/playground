@@ -1,5 +1,5 @@
 query Project($projectName: String!) {
-  allProject(where: { name: { eq: $projectName } }) {
+  allProject(where: { slug: { current: { eq: $projectName } } }) {
     ...ProjectFields
   }
 }

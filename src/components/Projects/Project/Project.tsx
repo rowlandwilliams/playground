@@ -9,8 +9,9 @@ interface Props {
     url: string;
     description: string;
     body: ReactNode;
-    tech: string[];
+    tech?: string[] | undefined;
     role: string;
+    slug?: string | undefined;
     isCurrent?: boolean;
   };
   activeProject: number | undefined;
@@ -19,7 +20,7 @@ interface Props {
 }
 
 export const Project = ({
-  project: { name, url, description, body, tech, role, isCurrent },
+  project: { name, url, description, body, tech, role, isCurrent, slug },
   activeProject,
   index,
   setActiveProject,
@@ -71,7 +72,9 @@ export const Project = ({
           </button>
         </div>
         <div className="flex justify-between items-center">
-          <p className="dark:text-zinc-300">{description}</p>
+          <p className="text-zinc-600 dark:text-zinc-300 font-normal">
+            {description}
+          </p>
         </div>
       </div>
       {active && (
@@ -81,25 +84,29 @@ export const Project = ({
             <div>
               Role: <span className="dark:text-zinc-300">{role}</span>
             </div>
-            <div className="flex gap-2 items-center flex-wrap">
-              {tech.map((technology) => (
-                <p
-                  key={technology}
-                  className="px-4 rounded-full border text-[11px] dark:border-zinc-700 dark:text-zinc-300"
-                >
-                  {technology}
-                </p>
-              ))}
-            </div>
+            {tech && (
+              <div className="flex gap-2 items-center flex-wrap">
+                {tech.map((technology) => (
+                  <p
+                    key={technology}
+                    className="px-4 rounded-full border text-[11px] dark:border-zinc-700 dark:text-zinc-300"
+                  >
+                    {technology}
+                  </p>
+                ))}
+              </div>
+            )}
           </section>
-          <div>
-            <Link
-              href={`/projects/${name}`}
-              className="flex font-normal text-teal-500 dark:text-violet-400 text-xs items-center gap-x-1"
-            >
-              Read more <Arrow dimension={8} />
-            </Link>
-          </div>
+          {slug && (
+            <div>
+              <Link
+                href={`/projects/${slug}`}
+                className="flex font-normal text-teal-500 dark:text-violet-400 text-xs items-center gap-x-1"
+              >
+                Read more <Arrow dimension={8} />
+              </Link>
+            </div>
+          )}
         </div>
       )}
     </section>

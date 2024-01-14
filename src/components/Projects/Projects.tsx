@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Project } from "./Project/Project";
 import Link from "next/link";
 
 const projects = [
   {
     name: "kulea",
+    slug: "kulea",
     url: "https://www.kulea.com/",
     description: "Africa's Commodity Intelligence Platform.",
     body: (
@@ -38,9 +39,10 @@ const projects = [
     isCurrent: true,
   },
   {
-    name: "Supernova",
+    name: "supernova",
+    slug: "supernova",
     url: "https://www.supernova.ai/",
-    description: "Illuminating the sustainable investing universe.",
+    description: "An analytics app for sustainable investment data.",
     body: (
       <>
         I conducted a few months of discovery work with Supernova AI, an
@@ -59,21 +61,13 @@ const projects = [
       "A free-to-use, embeddable widget displaying daily atmospheric Carbon Dioxide levels.",
     body: (
       <>
-        I currently lead the Engineering team at{" "}
-        <Link
-          href="https://www.kulea.com/"
-          target="_blank"
-          className="text-zinc-600 dark:text-zinc-200 underline underline-offset-4"
-        >
-          kulea
-        </Link>
-        , a Nairobi start-up providing data, insights and infrastructure for
-        agricultural trading. I write alot of code, manage a team of engineers
-        in Nairobi, Kenya and oversee development of a product backed by a $1
-        million seed round.
+        I was part of a team of designers / developers who built this widget to
+        allow universal access to daily data on atmospheric CO<sub>2</sub>{" "}
+        concentrations. It has since been embedded on several major news
+        websites and is endorsed by the Grantham Institure and the Scripps
+        Institution of Oceanography.
       </>
     ),
-    tech: ["SVG", "PHP"],
     role: "Voluntary",
   },
 ];

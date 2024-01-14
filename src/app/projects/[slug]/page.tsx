@@ -1,5 +1,6 @@
 import { DesktopProjectImages } from "@/components/DesktopProjectImages/DesktopProjectImages";
 import { ProjectPageHeaderAndImages } from "@/components/ProjectPage/ProjectPageHeaderAndImages/ProjectPageHeaderAndImages";
+import { ProjectPageTimeFrame } from "@/components/ProjectPage/ProjectPageTimeframe/ProjectPageTimeFrame";
 import { ProjectTemplateOverviewDeliverables } from "@/components/ProjectPage/ProjectTemplateOverviewDeliverables/ProjectTemplateOverviewDeliverables";
 import { ProjectTemplateOverviewLocations } from "@/components/ProjectPage/ProjectTemplateOverviewLocations/ProjectTemplateOverviewLocations";
 import { ProjectTemplateOverviewRole } from "@/components/ProjectPage/ProjectTemplateOverviewRole/ProjectTemplateOverviewRole";
@@ -24,29 +25,40 @@ export default async function Project({
 }) {
   // const [vertical, setVertical] = useState(false);
   const { data } = await getProjectByName(params.slug);
-  const projectImages = data?.allProject[0].projectImages;
-  const borderColorClass = `border-${data?.allProject[0].color}`;
+  const project = data?.allProject[0] || {};
+  const projectImages = project.projectImages;
+  const borderColorClass = `border-${project.color}`;
+  const textColorClass = `text-${project.color}`;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-8">
       <ProjectPageHeaderAndImages
         projectImages={projectImages}
         slug={params.slug}
       />
-      <ProjectTemplateOverviewRole jobTitle={data?.allProject[0].jobTitle} />
-      <ProjectTemplateOverviewTechnologies
-        technologies={data?.allProject[0].technologies}
-        borderColorClass={borderColorClass}
-      />
-      <ProjectTemplateOverviewDeliverables
-        deliverablesHeaderText="Deliverables"
-        borderColorClass={borderColorClass}
-        deliverables={data?.allProject[0].deliverables}
-      />
-      <ProjectTemplateOverviewLocations
-        borderColorClass={borderColorClass}
-        locations={data?.allProject[0].locations}
-      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8">
+        <ProjectTemplateOverviewRole jobTitle={project.jobTitle} />
+        <ProjectTemplateOverviewTechnologies
+          technologies={project.technologies}
+          borderColorClass={borderColorClass}
+        />
+        <ProjectTemplateOverviewDeliverables
+          deliverablesHeaderText="Deliverables"
+          borderColorClass={borderColorClass}
+          deliverables={project.deliverables}
+        />
+        <ProjectTemplateOverviewLocations
+          textColorClass={textColorClass}
+          locations={project.locations}
+        />
+        <ProjectPageTimeFrame
+          textColorClass={textColorClass}
+          timeframe={{
+            start: project.startDate,
+            end: project.endDate,
+          }}
+        />
+      </div>
     </div>
   );
 }

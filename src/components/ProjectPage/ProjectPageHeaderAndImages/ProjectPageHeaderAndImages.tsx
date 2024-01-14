@@ -14,7 +14,7 @@ interface Props {
 export const ProjectPageHeaderAndImages = ({ slug, projectImages }: Props) => {
   const [vertical, setVertical] = useState(false);
   return (
-    <>
+    <div className="space-y-4">
       <header className="flex justify-between">
         <div className="flex items-center gap-x-1.5 text-sm">
           <Link
@@ -41,6 +41,6 @@ export const ProjectPageHeaderAndImages = ({ slug, projectImages }: Props) => {
         </button>
       </header>
       <DesktopProjectImages projectImages={projectImages} vertical={vertical} />
-    </>
+    </div>
   );
 };

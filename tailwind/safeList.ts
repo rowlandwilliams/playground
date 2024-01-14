@@ -15,6 +15,7 @@ const classPrefixes = [
   "hover:border",
   "hover:bg",
   "dark:hover:border",
+  "text",
 ];
 
 const getSafelistColors = () => {

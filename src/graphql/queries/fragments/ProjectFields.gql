@@ -34,4 +34,6 @@ fragment ProjectFields on Project {
   category {
     name
   }
+  startDate
+  endDate
 }

@@ -3,12 +3,12 @@ import { ProjectTemplateOverviewTitleAndChildSection } from "../SHARED/ProjectTe
 
 interface Props {
   locations: (string | null)[] | null | undefined;
-  borderColorClass: string;
+  textColorClass: string;
 }
 
 export const ProjectTemplateOverviewLocations = ({
   locations,
-  borderColorClass,
+  textColorClass,
 }: Props) => {
   return locations ? (
     <ProjectTemplateOverviewTitleAndChildSection title="Location" isSmall>
@@ -17,11 +17,7 @@ export const ProjectTemplateOverviewLocations = ({
           <>
             <div key={location}>{location}</div>
             {i < locations.length - 1 && (
-              <div
-                className={classNames("h-2 w-2  border rounded-full", [
-                  borderColorClass,
-                ])}
-              ></div>
+              <p className={textColorClass}>&#8226;</p>
             )}
           </>
         ))}

@@ -16,7 +16,6 @@ export default function Home() {
           </div>
         </div>
         <Projects />
-        <Playground />
         <div className="sm:hidden">
           <TernaryPlot />
         </div>

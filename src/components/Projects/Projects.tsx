@@ -25,12 +25,14 @@ const projects = [
           for agricultural commodity trading.{" "}
           <span className="hidden sm:inline">
             I write alot of code, manage a team of engineers and oversee
-            development of a product backed by a $1 million seed round.
+            development of a product that I built from scratch and is now backed
+            by a $1 million seed round.
           </span>
         </p>
         <p className="sm:hidden">
           I write alot of code, manage a team of engineers and oversee
-          development of a product that I built from scratch and is now backed by a $1 million seed round.
+          development of a product that I built from scratch and is now backed
+          by a $1 million seed round.
         </p>
       </>
     ),

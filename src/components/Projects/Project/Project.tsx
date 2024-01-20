@@ -64,7 +64,7 @@ export const Project = ({
               }
             }}
             className={classNames(
-              "hover:bg-zinc-100 text-zinc-400 dark:text-zinc-300 dark:hover:bg-zinc-600 h-6 w-6 flex items-center justify-center rounded-sm",
+              "hover:bg-zinc-100 text-zinc-600 dark:text-zinc-300 dark:hover:bg-zinc-600 h-6 w-6 flex items-center justify-center rounded-sm",
               { "text-2xl": active, "text-xl": !active }
             )}
           >
@@ -72,13 +72,13 @@ export const Project = ({
           </button>
         </div>
         <div className="flex justify-between items-center">
-          <p className="text-zinc-600 dark:text-zinc-300 font-normal">
+          <p className="text-zinc-700 dark:text-zinc-300 font-normal">
             {description}
           </p>
         </div>
       </div>
       {active && (
-        <div className="py-8 sm:py-4 text-[13px] space-y-8 sm:space-y-4 font-light text-zinc-600 dark:text-zinc-400">
+        <div className="py-8 sm:py-4 text-[13px] space-y-8 sm:space-y-4 font-[350] dark:font-light text-zinc-700 dark:text-zinc-400">
           <div className="text-sm sm:text-[13px] space-y-2">{body}</div>
           <section className="space-y-4 sm:space-y-4">
             <div>
@@ -89,7 +89,7 @@ export const Project = ({
                 {tech.map((technology) => (
                   <p
                     key={technology}
-                    className="px-4 rounded-full border text-[11px] dark:border-zinc-700 dark:text-zinc-300"
+                    className="px-4 rounded-full font-normal border text-[11px] dark:border-zinc-700 dark:text-zinc-300"
                   >
                     {technology}
                   </p>
@@ -101,7 +101,7 @@ export const Project = ({
             <div>
               <Link
                 href={`/projects/${slug}`}
-                className="flex font-normal text-teal-500 dark:text-violet-400 text-xs items-center gap-x-1"
+                className="flex font-medium dark:font-normal text-fuchsia-600 dark:text-violet-400 text-xs items-center gap-x-1"
               >
                 Read more <Arrow dimension={8} />
               </Link>

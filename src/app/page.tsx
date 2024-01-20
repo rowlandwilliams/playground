@@ -6,7 +6,7 @@ import { TernaryPlot } from "@/components/TernaryPlot/TernaryPlot";
 
 export default function Home() {
   return (
-    <main className="flex px-8 flex-col items-center my-12 text-zinc-600">
+    <main className="flex px-8 flex-col items-center my-12">
       <article className="w-full max-w-[700px] space-y-20">
         <Navbar />
         <div className="grid grid-cols-1 sm:grid-cols-2">

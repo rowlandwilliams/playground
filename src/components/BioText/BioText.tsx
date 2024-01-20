@@ -29,7 +29,7 @@ export const BioText = () => {
           .
         </p>
       </section>
-      <section className="sm:hidden text-3xl space-y-8  text-zinc-900 dark:text-zinc-100">
+      <section className="sm:hidden text-3xl space-y-8 font-[450] dark:font-normal text-black dark:text-zinc-100">
         <p>
           Hi — I&apos;m Rowland, a Software Engineer interested in Data
           Visualisation.

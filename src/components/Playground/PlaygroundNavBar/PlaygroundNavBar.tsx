@@ -40,7 +40,10 @@ export const PlaygroundNavBar = ({ isDesktop }: Props) => {
           href={`/playground/${link}`}
           className={classNames(
             "flex whitespace-nowrap gap-x-2 items-center px-4 py-2 rounded-md",
-            { "bg-zinc-700  font-medium": activeViz === link }
+            {
+              "bg-zinc-200 dark:bg-zinc-700  font-medium": activeViz === link,
+              "hover:bg-zinc-100 dark:hover:bg-zinc-800": activeViz !== link,
+            }
           )}
         >
           {icon}

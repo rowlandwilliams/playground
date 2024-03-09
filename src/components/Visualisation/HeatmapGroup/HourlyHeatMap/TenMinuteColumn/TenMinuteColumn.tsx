@@ -29,7 +29,7 @@ export const TenMinuteColumn = ({
             y={dimension < rectWidth ? i * rectWidth + diff : i * rectWidth}
             key={rectWidth * Math.random()}
             fill={minute > 0 ? String(colorScale(minute)) : "#4b5563"}
-            stroke=""
+            className="stroke-zinc-100 dark:stroke-chart-gray"
           />
         );
       })}

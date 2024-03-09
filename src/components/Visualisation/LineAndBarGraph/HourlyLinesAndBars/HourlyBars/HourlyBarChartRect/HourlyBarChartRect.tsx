@@ -25,7 +25,7 @@ export const HourlyBarChartRect = ({
       height={100}
       x={x}
       y={y}
-      rx="1"
+      rx={4}
       className="cursor-pointer stroke-2 stroke-gray-50 dark:stroke-zinc-900"
       fill={barColorOnHover}
     />

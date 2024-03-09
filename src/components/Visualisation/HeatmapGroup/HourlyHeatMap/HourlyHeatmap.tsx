@@ -36,7 +36,10 @@ export const HourlyHeatmap = ({
   return (
     <g
       transform={`translate(${x}, ${y})`}
-      className="stroke-current text-chart-gray stroke-1 md:stroke-2"
+      className={classNames(
+        "stroke-current text-chart-gray stroke-1 md:stroke-2",
+        { "opacity-60": !active }
+      )}
       onClick={() => handleHourGroupClick(index)}
     >
       <g transform={`translate(0, ${y / 4})`}>

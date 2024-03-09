@@ -26,7 +26,7 @@ import { Bar } from "@visx/shape";
 import { interpolateRgb } from "d3-interpolate";
 
 export const Visualisation = () => {
-  const [activeHour, setActiveHour] = useState(9);
+  const [activeHour, setActiveHour] = useState(11);
   const handleHourGroupClick = (hour: number) => setActiveHour(hour);
 
   const {
@@ -74,21 +74,30 @@ export const Visualisation = () => {
   return (
     <div className="flex flex-col grow space-y-4 overflow-auto  bg-chart-gray pt-8 pb-2 px-4 rounded-md">
       <div className="grow min-w-[1000px] overflow-x-auto" ref={lineGraphRef}>
-        <svg className="grow border-b border-gray-700" width="100%" height={lineGraphHeight}>
-          <rect className="fill-chart-gray w-full h-full"></rect>
-          <g className="fill-current text-header-gray hover:bg-chart-purple">
-            {barChartData.map((d, i) => (
-              <Bar
-                key={i}
-                x={xScale(i)}
-                y={barYScale(d)}
-                width={xScale.bandwidth()}
-                height={lineGraphHeight - barYScale(d)}
-                fill={colorScale(d) as string}
-              />
-            ))}
-          </g>
-        </svg>
+        {loaded && (
+          <svg
+            className="grow border-b border-gray-700"
+            width="100%"
+            height={lineGraphHeight}
+          >
+            <rect className="fill-chart-gray w-full h-full"></rect>
+            <g className="fill-current text-header-gray hover:bg-chart-purple">
+              {barChartData.map((d, i) => (
+                <>
+                  <Bar
+                    key={i}
+                    x={xScale(i)}
+                    y={barYScale(d)}
+                    width={xScale.bandwidth()}
+                    height={lineGraphHeight - barYScale(d)}
+                    fill={colorScale(d) as string}
+                    rx={2}
+                  />
+                </>
+              ))}
+            </g>
+          </svg>
+        )}
       </div>
       <div
         ref={heatMapRef}

@@ -1,4 +1,6 @@
+import { TwentyFourHoursIcon } from "@/components/Icons/TwentyFourHoursIcon/TwentyFourHoursIcon";
 import { ThemeToggle } from "@/components/Navbar/ThemeToggle/ThemeToggle";
+import { PlaygroundNavBar } from "@/components/Playground/PlaygroundNavBar/PlaygroundNavBar";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -21,7 +23,10 @@ export default function PlaygroundLayout({
         />
         <ThemeToggle />
       </nav>
-      {children}
+      <section className="flex gap-x-4 grow">
+        <PlaygroundNavBar />
+        {children}
+      </section>
     </section>
   );
 }

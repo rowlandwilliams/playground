@@ -72,15 +72,14 @@ export const Visualisation = () => {
   const barWidth = lineGraphWidth / nMinutes;
 
   return (
-    <div className="flex flex-col grow space-y-4 overflow-auto  bg-chart-gray pt-8 pb-2 px-4 rounded-md">
+    <div className="flex flex-col grow space-y-4 overflow-auto bg-zinc-100 dark:bg-chart-gray pt-8 pb-2 px-4 rounded-md">
       <div className="grow min-w-[1000px] overflow-x-auto" ref={lineGraphRef}>
         {loaded && (
           <svg
-            className="grow border-b border-gray-700"
+            className="grow border-b dark:border-gray-700"
             width="100%"
             height={lineGraphHeight}
           >
-            <rect className="fill-chart-gray w-full h-full"></rect>
             <g className="fill-current text-header-gray hover:bg-chart-purple">
               {barChartData.map((d, i) => (
                 <>

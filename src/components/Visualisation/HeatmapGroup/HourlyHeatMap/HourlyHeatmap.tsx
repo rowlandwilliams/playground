@@ -59,8 +59,8 @@ export const HourlyHeatmap = ({
       </g>
       <text
         className={classNames("text-xs fill-current stroke-0", {
-          "text-green-400": active,
-          "text-gray-200": !active,
+          "text-pink-500 dark:text-green-400": active,
+          "dark:text-gray-200": !active,
         })}
       >
         {index < 10 ? `0${index}` : index}
@@ -69,7 +69,7 @@ export const HourlyHeatmap = ({
         <rect
           height={5}
           width={hourGroupWidth - 25}
-          className="fill-green-400"
+          className="fill-pink-500 dark:fill-green-400 stroke-none"
           y={-6}
           x={20}
         />

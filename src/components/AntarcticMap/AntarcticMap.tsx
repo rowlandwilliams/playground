@@ -21,8 +21,8 @@ export const AntarcticMap = () => {
     .translate([(dim + circlePadding) / 2, (dim + circlePadding) / 2]);
   const pathGenerator = geoPath().projection(projection);
 
-  const landFeat = feature(land, land.objects.antarctica);
-  const iceFeat = feature(ice, ice.objects.shelves);
+  const landFeat = feature(land as any, land.objects.antarctica as any);
+  const iceFeat = feature(ice as any, ice.objects.shelves as any);
 
   console.log(landFeat);
 
@@ -62,7 +62,7 @@ export const AntarcticMap = () => {
           ></rect>
           <g id="rock-group"></g>
         </g>
-        {iceFeat.features.map((feat) => (
+        {/* {iceFeat.features.map((feat) => (
           <path className=" fill-gray-200" d={pathGenerator(feat)} />
         ))}
         {landFeat.features.map((feat) => (
@@ -70,7 +70,7 @@ export const AntarcticMap = () => {
             className=" fill-white stroke-gray-300"
             d={pathGenerator(feat)}
           />
-        ))}
+        ))} */}
       </svg>
     </div>
   );

@@ -1,4 +1,6 @@
+import { TwentyFourHoursIcon } from "@/components/Icons/TwentyFourHoursIcon/TwentyFourHoursIcon";
 import { ThemeToggle } from "@/components/Navbar/ThemeToggle/ThemeToggle";
+import { PlaygroundNavBar } from "@/components/Playground/PlaygroundNavBar/PlaygroundNavBar";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -20,8 +22,12 @@ export default function PlaygroundLayout({
           className="h-3 w-3 rounded-full bg-gradient-to-br from-blue-700 dark:from-teal-400 via-rose-600 dark:via-blue-600 to-yellow-400 dark:to-yellow-200"
         />
         <ThemeToggle />
+        <PlaygroundNavBar isDesktop={false} />
       </nav>
-      {children}
+      <section className="flex gap-x-4 grow">
+        <PlaygroundNavBar isDesktop/>
+        {children}
+      </section>
     </section>
   );
 }

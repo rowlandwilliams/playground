@@ -19,13 +19,21 @@ const options = [
   },
 ];
 
-export const PlaygroundNavBar = () => {
+interface Props {
+  isDesktop: boolean;
+}
+
+export const PlaygroundNavBar = ({ isDesktop }: Props) => {
   const pathname = usePathname();
   const activeViz = pathname.split("/").pop();
-  console.log(activeViz);
 
   return (
-    <nav className="hidden md:block space-y-2 w-40">
+    <nav
+      className={classNames("w-40", {
+        "hidden md:block space-y-2 ": isDesktop,
+        "flex items-center md:hidden ml-2": !isDesktop,
+      })}
+    >
       {options.map(({ label, icon, link }) => (
         <Link
           key={label}

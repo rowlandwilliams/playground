@@ -22,9 +22,10 @@ export default function PlaygroundLayout({
           className="h-3 w-3 rounded-full bg-gradient-to-br from-blue-700 dark:from-teal-400 via-rose-600 dark:via-blue-600 to-yellow-400 dark:to-yellow-200"
         />
         <ThemeToggle />
+        <PlaygroundNavBar isDesktop={false} />
       </nav>
       <section className="flex gap-x-4 grow">
-        <PlaygroundNavBar />
+        <PlaygroundNavBar isDesktop/>
         {children}
       </section>
     </section>

@@ -58,17 +58,22 @@ export const getBubbleRadiusScale = () => {
 };
 
 //// DIMENSIONS ////
-export const getHourGroupWidth = (width: number, height: number) => {
-  const hourGroupWidth = width / nHoursPerDay;
+export const getHourGroupWidth = ({
+  lineGraphWidth,
+  lineGraphHeight,
+  heatMapWidth,
+}: {
+  lineGraphWidth: number;
+  lineGraphHeight: number;
+  heatMapWidth: number;
+}) => {
+  const hourGroupWidth = heatMapWidth / nHoursPerDay;
   const paddedWidth = hourGroupWidth - padding;
   const hourGroupHeight = hourGroupWidth * 2 + padding;
-  const lineGraphHeight = height;
 
   return {
     hourGroupWidth,
     hourGroupHeight,
-    lineGraphWidth: paddedWidth,
-    lineGraphHeight,
     bubbleHeight: lineGraphHeight * 4,
     rectWidth: paddedWidth / nCellsPerRow,
   };

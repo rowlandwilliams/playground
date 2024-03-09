@@ -9,6 +9,7 @@ interface Props {
   widthScale: ScaleLinear<number, number, never>;
   rectWidth: number;
   handleHourGroupClick: (hour: number) => void;
+  activeHour: number;
 }
 
 export const Heatmap = ({
@@ -18,6 +19,7 @@ export const Heatmap = ({
   widthScale,
   rectWidth,
   handleHourGroupClick,
+  activeHour,
 }: Props) => {
   return (
     <g transform={`translate(3,0)`}>
@@ -35,6 +37,8 @@ export const Heatmap = ({
           colorScale={colorScale}
           rectWidth={rectWidth}
           widthScale={widthScale}
+          hourGroupWidth={hourGroupWidth}
+          activeHour={activeHour}
         />
       ))}
     </g>

@@ -26,7 +26,7 @@ import { Bar } from "@visx/shape";
 import { interpolateRgb } from "d3-interpolate";
 
 export const Visualisation = () => {
-  const [activeHour, setActiveHour] = useState(19);
+  const [activeHour, setActiveHour] = useState(9);
   const handleHourGroupClick = (hour: number) => setActiveHour(hour);
 
   const {
@@ -35,14 +35,14 @@ export const Visualisation = () => {
     graphHeight: lineGraphHeight,
   } = useResponsiveGraphDims();
   const {
-    ref: heatmapRef,
+    ref: heatMapRef,
     graphHeight: heatMapHeight,
-    graphWidth: heatmapWidth,
+    graphWidth: heatMapWidth,
   } = useResponsiveGraphDims();
   const loaded = lineGraphHeight > 0;
 
   const { hourGroupWidth, hourGroupHeight, rectWidth, bubbleHeight } =
-    getHourGroupWidth(lineGraphWidth, lineGraphHeight);
+    getHourGroupWidth({ lineGraphWidth, lineGraphHeight, heatMapWidth });
 
   const widthScale = getWidthScale(rectWidth);
 
@@ -66,15 +66,14 @@ export const Visualisation = () => {
 
   const colorScale = scaleLinear()
     .domain([0, Math.max(...dataset.flat()) * 0.5, Math.max(...dataset.flat())])
-    .range(["#FFFA7A", "#FF6868", "#512FFF"] as any)
-    .interpolate(interpolateRgb.gamma(2.2) as any);
+    .range(["#FFFA7A", "#FF6868", "#512FFF"] as any);
 
   const nMinutes = 60;
   const barWidth = lineGraphWidth / nMinutes;
 
   return (
-    <div className="flex flex-col grow space-y-4 bg-chart-gray py-8 px-4 rounded-md">
-      <div className="grow" ref={lineGraphRef}>
+    <div className="flex flex-col grow space-y-4 overflow-auto  bg-chart-gray pt-8 pb-2 px-4 rounded-md">
+      <div className="grow min-w-[1000px] overflow-x-auto" ref={lineGraphRef}>
         <svg className="grow" width="100%" height={lineGraphHeight}>
           <rect className="fill-chart-gray w-full h-full"></rect>
           <g className="fill-current text-header-gray hover:bg-chart-purple">
@@ -91,17 +90,11 @@ export const Visualisation = () => {
           </g>
         </svg>
       </div>
-      <div ref={heatmapRef} className="h-28">
-        <svg
-          className="w-full"
-          width={heatmapWidth}
-          height={heatMapHeight}
-        >
-          <rect
-            height={heatMapHeight}
-            width={hourGroupWidth}
-            className="fill-indigo-600"
-          />
+      <div
+        ref={heatMapRef}
+        className="h-[150px] overflow-x-auto  min-w-[1000px]"
+      >
+        <svg className="w-full" width={heatMapWidth} height={heatMapHeight}>
           <Heatmap
             hourGroupWidth={hourGroupWidth}
             plotData={dataset}
@@ -109,6 +102,7 @@ export const Visualisation = () => {
             widthScale={widthScale}
             rectWidth={rectWidth}
             handleHourGroupClick={handleHourGroupClick}
+            activeHour={activeHour}
           />
         </svg>
       </div>

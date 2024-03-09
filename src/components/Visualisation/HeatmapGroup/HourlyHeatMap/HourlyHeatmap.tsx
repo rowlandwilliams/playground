@@ -1,5 +1,7 @@
 import { ScaleLinear } from "d3-scale";
 import { TenMinuteColumn } from "./TenMinuteColumn/TenMinuteColumn";
+import classNames from "classnames";
+import { act } from "react-dom/test-utils";
 
 interface Props {
   x: number;
@@ -10,6 +12,8 @@ interface Props {
   widthScale: ScaleLinear<number, number, never>;
   rectWidth: number;
   handleHourGroupClick: (hour: number) => void;
+  hourGroupWidth: number;
+  activeHour: number;
 }
 
 const nCellsPerRow = 6;
@@ -24,7 +28,11 @@ export const HourlyHeatmap = ({
   rectWidth,
   widthScale,
   handleHourGroupClick,
+  hourGroupWidth,
+  activeHour,
 }: Props) => {
+  const active = activeHour === index;
+
   return (
     <g
       transform={`translate(${x}, ${y})`}
@@ -46,9 +54,23 @@ export const HourlyHeatmap = ({
           />
         ))}
       </g>
-      <text className="text-xs fill-current text-white stroke-0 opacity-80">
+      <text
+        className={classNames("text-xs fill-current stroke-0", {
+          "text-green-400": active,
+          "text-gray-200": !active,
+        })}
+      >
         {index < 10 ? `0${index}` : index}
       </text>
+      {active && (
+        <rect
+          height={5}
+          width={hourGroupWidth - 25}
+          className="fill-green-400"
+          y={-6}
+          x={20}
+        />
+      )}
     </g>
   );
 };

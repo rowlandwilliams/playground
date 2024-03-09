@@ -12,12 +12,12 @@ export const TernaryPlotBaseTriangles = ({
   strokeClass = "stroke-zinc-300 dark:stroke-gray-700 stroke-[0.5px]",
 }: Props) => {
   const trianglePlotDim = plotDim / nTriangles;
-  const numbers = [...Array(nTriangles)];
+  const numbers = Array.from({ length: nTriangles }, (_, index) => index + 1);
   return (
     <>
       {numbers.map((number, i) => (
         <line
-          key={number}
+          key={`${number}-line1`}
           x1={half - trianglePlotDim * (0.5 * i + 0.5)}
           x2={plotDim - trianglePlotDim * (i + 1)}
           y1={trianglePlotDim * (i + 1)}
@@ -27,7 +27,7 @@ export const TernaryPlotBaseTriangles = ({
       ))}
       {numbers.map((number, i) => (
         <line
-          key={number}
+          key={`${number}-line2`}
           x1={half + trianglePlotDim * (0.5 * i + 0.5)}
           x2={0 + trianglePlotDim * (i + 1)}
           y1={trianglePlotDim * (i + 1)}
@@ -37,7 +37,7 @@ export const TernaryPlotBaseTriangles = ({
       ))}
       {numbers.map((number, i) => (
         <line
-          key={number}
+          key={`${number}-line2`}
           x1={half - trianglePlotDim * (0.5 * i + 0.5)}
           x2={half + trianglePlotDim * (0.5 * i + 0.5)}
           y1={trianglePlotDim * (i + 1)}

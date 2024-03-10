@@ -1,6 +1,7 @@
 "use client";
 
 import { ClusterAnalysisIcon } from "@/components/Icons/ClusterAnalysisIcon/ClusterAnalysisIcon";
+import { SankeyIcon } from "@/components/Icons/SankeyIcon/SankeyIcon";
 import { StockChartIcon } from "@/components/Icons/StockChartIcon/StockChartIcon";
 import { TriangleIcon } from "@/components/Icons/TriangleIcon/TriangleIcon";
 import { TwentyFourHoursIcon } from "@/components/Icons/TwentyFourHoursIcon/TwentyFourHoursIcon";
@@ -15,14 +16,19 @@ const options = [
     link: "twenty-four-hours",
   },
   {
+    label: "Stock chart",
+    icon: <StockChartIcon />,
+    link: "stock-chart",
+  },
+  {
     label: "Cluster Analysis",
     icon: <ClusterAnalysisIcon />,
     link: "cluster-analysis",
   },
   {
-    label: "Stock chart",
-    icon: <StockChartIcon />,
-    link: "stock-chart",
+    label: "Sankey",
+    icon: <SankeyIcon />,
+    link: "sankey",
   },
   {
     label: "Ternary Plot",

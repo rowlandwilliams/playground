@@ -1,5 +1,10 @@
-import { Province, SankeyLinkObj, NodeWithColor } from "./../../../types/types";
-import { NodeObj, RawFlow } from "../../../types/types";
+import {
+  Province,
+  SankeyLinkObj,
+  NodeWithColor,
+  NodeObj,
+  RawFlow,
+} from "@/types/types";
 import colors from "tailwindcss/colors";
 
 const colorsTyped: {

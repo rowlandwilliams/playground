@@ -1,4 +1,4 @@
-import { RawFlow } from '../../../../types/types';
+import { RawFlow } from '@/types/types';
 export const southAfricaRaw: RawFlow[] = [
     {
         origin: 'ZAF:2',

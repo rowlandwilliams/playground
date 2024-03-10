@@ -5,7 +5,7 @@ import { getSankeyDataFromRaw } from "./utils/data-processing";
 import { southAfricaProvinces } from "./data/southAfrica/provinces";
 import { getSankeyGenerator } from "./utils/plot";
 import { SankeyNodeTooltip } from "./SankeyNodeTooltip/SankeyNodeTooltip";
-import { TransformedLink } from "../../types/types";
+import { TransformedLink } from "@/types/types";
 import { SankeySvg } from "./SankeySvg/SankeySvg";
 import { SankeyLinkTooltip } from "./SankeyLinkTooltip/SankeyLinkTooltip";
 import { useResponsiveGraphDims } from "@/hooks/useResponsiveGraphWidth";
@@ -23,13 +23,11 @@ const Sankey = () => {
   );
 
   return (
-    <div className="relative h-full grow" ref={ref}>
-      <SankeySvg
-        graphHeight={graphHeight}
-        graphWidth={graphWidth}
-        links={links as TransformedLink[]}
-        nodes={nodes}
-      />
+    <div
+      className="relative w-full  space-y-4 overflow-auto bg-zinc-100 dark:bg-chart-gray py-6 rounded-md"
+      ref={ref}
+    >
+      <SankeySvg links={links as TransformedLink[]} nodes={nodes} />
       <SankeyNodeTooltip />
       <SankeyLinkTooltip />
     </div>

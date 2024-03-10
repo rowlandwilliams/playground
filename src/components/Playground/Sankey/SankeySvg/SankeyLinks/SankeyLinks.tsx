@@ -1,5 +1,5 @@
 import { SankeyLinkMinimal } from 'd3-sankey';
-import { TransformedLink } from '../../../../types/types';
+import { TransformedLink } from '@/types/types';
 import { SankeyLink } from './SankeyLink/SankeyLink';
 
 interface Props {

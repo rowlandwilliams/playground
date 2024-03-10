@@ -1,7 +1,7 @@
+import { RawData } from "@/types/types";
 import { sankey } from "d3-sankey";
-import { RawData } from "../../../types/types";
 
-export const sankeyMargin = { top: 10, right: 20, bottom: 10, left: 20 };
+export const sankeyMargin = { top: 10, right: 40, bottom: 10, left: 40 };
 export const nodeWidth = 10;
 export const nodeTooltipPadding = 5;
 

@@ -1,6 +1,6 @@
 import { sankeyLinkHorizontal } from "d3-sankey";
 import classNames from "classnames";
-import { TransformedLink } from "../../../../../types/types";
+import { TransformedLink } from "@/types/types";
 import { useState } from "react";
 import { useStore } from "@/store/store";
 

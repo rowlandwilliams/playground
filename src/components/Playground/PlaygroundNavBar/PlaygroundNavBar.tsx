@@ -1,6 +1,7 @@
 "use client";
 
 import { ClusterAnalysisIcon } from "@/components/Icons/ClusterAnalysisIcon/ClusterAnalysisIcon";
+import { TriangleIcon } from "@/components/Icons/TriangleIcon/TriangleIcon";
 import { TwentyFourHoursIcon } from "@/components/Icons/TwentyFourHoursIcon/TwentyFourHoursIcon";
 import classNames from "classnames";
 import Link from "next/link";
@@ -19,8 +20,13 @@ const options = [
   },
   {
     label: "Ternary Plot",
-    icon: <ClusterAnalysisIcon />,
+    icon: <TriangleIcon />,
     link: "ternary-plot",
+  },
+  {
+    label: "Ternary Plot",
+    icon: <TriangleIcon />,
+    link: "stock-chart",
   },
 ];
 

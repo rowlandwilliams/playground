@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Sankey from "../Sankey/Sankey";
-import { ClusterAnalysis } from "../ClusterAnalysis/ClusterAnalysis";
+import { ClusterAnalysis } from "./ClusterAnalysis/ClusterAnalysis";
 
 export const Playground = () => {
   return (

@@ -5,7 +5,7 @@ import {
   getYScale,
   plotPoints,
 } from "../../utils/shared";
-import { getClusterYAxis, getGraphSelections } from "./../../utils/shared";
+import { getClusterYAxis, getGraphSelections } from "../../utils/shared";
 
 export const plotZoomGraph = (
   parentWidth: number,

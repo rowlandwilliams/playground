@@ -1,5 +1,5 @@
 import { clusterStore } from "@/store/cluster";
-import { Point } from "@/types/cluster-analysis";
+import { Point } from "@/types/playground/cluster-analysis";
 import { axisBottom, axisLeft } from "d3-axis";
 import { scaleLinear, ScaleLinear, scaleTime, ScaleTime } from "d3-scale";
 import { select, Selection } from "d3-selection";

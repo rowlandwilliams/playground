@@ -1,5 +1,8 @@
 import create from "zustand";
-import { CoordsWithTooltipData, Point } from "../types/cluster-analysis";
+import {
+  CoordsWithTooltipData,
+  Point,
+} from "../types/playground/cluster-analysis";
 
 const graphMargin = { top: 40, right: 40, bottom: 40, left: 40 };
 

@@ -1,6 +1,8 @@
 "use client";
 
 import { ClusterAnalysisIcon } from "@/components/Icons/ClusterAnalysisIcon/ClusterAnalysisIcon";
+import { StockChartIcon } from "@/components/Icons/StockChartIcon/StockChartIcon";
+import { TriangleIcon } from "@/components/Icons/TriangleIcon/TriangleIcon";
 import { TwentyFourHoursIcon } from "@/components/Icons/TwentyFourHoursIcon/TwentyFourHoursIcon";
 import classNames from "classnames";
 import Link from "next/link";
@@ -18,8 +20,13 @@ const options = [
     link: "cluster-analysis",
   },
   {
+    label: "Stock chart",
+    icon: <StockChartIcon />,
+    link: "stock-chart",
+  },
+  {
     label: "Ternary Plot",
-    icon: <ClusterAnalysisIcon />,
+    icon: <TriangleIcon />,
     link: "ternary-plot",
   },
 ];
@@ -34,9 +41,9 @@ export const PlaygroundNavBar = ({ isDesktop }: Props) => {
 
   return (
     <nav
-      className={classNames("w-40", {
+      className={classNames("w-40 shrink-0", {
         "hidden md:block space-y-2 ": isDesktop,
-        "flex items-center md:hidden ml-2": !isDesktop,
+        "flex items-center md:hidden ml-2 gap-x-2": !isDesktop,
       })}
     >
       {options.map(({ label, icon, link }) => (
@@ -52,7 +59,7 @@ export const PlaygroundNavBar = ({ isDesktop }: Props) => {
           )}
         >
           {icon}
-          <p>{label}</p>
+          {isDesktop && <p>{label}</p>}
         </Link>
       ))}
     </nav>

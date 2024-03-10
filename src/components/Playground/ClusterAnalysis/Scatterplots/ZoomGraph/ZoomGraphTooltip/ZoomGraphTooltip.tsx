@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { pointGroups } from "../../../GroupSelectors/utils/utils";
 import { ZoomGraphTooltipRow } from "./ZoomGraphTooltipRow/ZoomGraphTooltipRow";
 import { ZoomGraphTooltipTriangle } from "./ZoomGraphTooltipTriangle/ZoomGraphTooltipTriangle";
-import { CoordsWithTooltipData } from "@/types/cluster-analysis";
+import { CoordsWithTooltipData } from "@/types/playground/cluster-analysis";
 
 interface Props {
   pointIsHovered: boolean;

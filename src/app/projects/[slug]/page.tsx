@@ -1,9 +1,9 @@
-import { ProjectPageHeaderAndImages } from "@/components/ProjectPage/ProjectPageHeaderAndImages/ProjectPageHeaderAndImages";
-import { ProjectPageTimeFrame } from "@/components/ProjectPage/ProjectPageTimeframe/ProjectPageTimeFrame";
-import { ProjectTemplateOverviewDeliverables } from "@/components/ProjectPage/ProjectTemplateOverviewDeliverables/ProjectTemplateOverviewDeliverables";
-import { ProjectTemplateOverviewLocations } from "@/components/ProjectPage/ProjectTemplateOverviewLocations/ProjectTemplateOverviewLocations";
-import { ProjectTemplateOverviewRole } from "@/components/ProjectPage/ProjectTemplateOverviewRole/ProjectTemplateOverviewRole";
-import { ProjectTemplateOverviewTechnologies } from "@/components/ProjectPage/ProjectTemplateOverviewTechnologies/ProjectTemplateOverviewTechnologies";
+import { ProjectPageHeaderAndImages } from "@/components/Playground/ProjectPage/ProjectPageHeaderAndImages/ProjectPageHeaderAndImages";
+import { ProjectPageTimeFrame } from "@/components/Playground/ProjectPage/ProjectPageTimeframe/ProjectPageTimeFrame";
+import { ProjectTemplateOverviewDeliverables } from "@/components/Playground/ProjectPage/ProjectTemplateOverviewDeliverables/ProjectTemplateOverviewDeliverables";
+import { ProjectTemplateOverviewLocations } from "@/components/Playground/ProjectPage/ProjectTemplateOverviewLocations/ProjectTemplateOverviewLocations";
+import { ProjectTemplateOverviewRole } from "@/components/Playground/ProjectPage/ProjectTemplateOverviewRole/ProjectTemplateOverviewRole";
+import { ProjectTemplateOverviewTechnologies } from "@/components/Playground/ProjectPage/ProjectTemplateOverviewTechnologies/ProjectTemplateOverviewTechnologies";
 import { ProjectDocument } from "@/graphql/generated";
 import { getUrqlClient } from "@/lib/urql";
 

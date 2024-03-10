@@ -32,10 +32,15 @@ export const Navbar = () => {
           <ThemeToggle />
         </div>
       </div>
-      <h2 className="text-sm sm:text-xs flex items-center text-zinc-600 dark:text-zinc-400 font-light gap-x-2 ">
-        Design Technologist
-        <div className="h-3 w-3 rounded-full bg-gradient-to-br from-blue-700 dark:from-teal-400 via-rose-600 dark:via-blue-600 to-yellow-400 dark:to-yellow-200"></div>
-      </h2>
+      <div className="flex justify-between items-center">
+        <h2 className="text-sm sm:text-xs flex items-center text-zinc-600 dark:text-zinc-400 font-light gap-x-2 ">
+          Design Technologist
+          <div className="h-3 w-3 rounded-full bg-gradient-to-br from-blue-700 dark:from-teal-400 via-rose-600 dark:via-blue-600 to-yellow-400 dark:to-yellow-200"></div>
+        </h2>
+        <div className="flex gap-x-2">
+          <Link href={"/playground/twenty-four-hours"}>Playground</Link>
+        </div>
+      </div>
     </header>
   );
 };

@@ -3,6 +3,7 @@ interface Props {
   trianglePlotDim: number;
   padding: number;
   labelOffset: number;
+  labelValues: string[];
 }
 
 export const TernaryPlotLabels = ({
@@ -10,6 +11,7 @@ export const TernaryPlotLabels = ({
   trianglePlotDim,
   padding,
   labelOffset,
+  labelValues,
 }: Props) => {
   return (
     <g className="text-xs">
@@ -21,7 +23,7 @@ export const TernaryPlotLabels = ({
         dominantBaseline="hanging"
         transform={`translate(${padding / 2},20)`}
       >
-        Developer
+        {labelValues[0]}
       </text>
       <text
         className="fill-zinc-600 dark:fill-white"
@@ -29,7 +31,7 @@ export const TernaryPlotLabels = ({
         y={trianglePlotDim + padding - labelOffset}
         textAnchor="end"
       >
-        Artist
+        {labelValues[1]}
       </text>
       <text
         className="fill-zinc-600 dark:fill-white"
@@ -38,7 +40,7 @@ export const TernaryPlotLabels = ({
         textAnchor="start"
         transform={`translate(${padding / 2},0})`}
       >
-        Designer
+        {labelValues[2]}
       </text>
     </g>
   );

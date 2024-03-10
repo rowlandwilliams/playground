@@ -5,18 +5,34 @@ import { TernaryPlotBaseTriangles } from "./TernaryPlotBaseTriangles/TernaryPlot
 import { useResponsiveGraphDims } from "@/hooks/useResponsiveGraphWidth";
 import { TernaryPlotLabels } from "./TernaryPlotLabels/TernaryPlotLabels";
 import { TernaryPlotPoint } from "./TernaryPlotPoint/TernaryPlotPoint";
+import classNames from "classnames";
 
-export const TernaryPlot = () => {
-  const { ref, graphWidth } = useResponsiveGraphDims();
+interface Props {
+  useHeight?: boolean;
+  maxWidthClass?: string;
+  labelValues?: string[];
+}
+
+export const TernaryPlot = ({
+  useHeight = false,
+  maxWidthClass = "max-w-[300px]",
+  labelValues = ["Developer", "Artist", "Designer"],
+}: Props) => {
+  const { ref, graphWidth, graphHeight } = useResponsiveGraphDims();
+
   const padding = 65;
-  const trianglePlotDim = graphWidth - padding;
+  const dim = useHeight ? graphHeight : graphWidth;
+  const trianglePlotDim = dim - padding;
 
   const half = trianglePlotDim / 2;
   const labelOffset = 10;
   return (
     <div
       ref={ref}
-      className="flex mx-auto sm:mx-0 w-full max-w-[300px] justify-self-end justify-center items-center"
+      className={classNames(
+        "flex mx-auto sm:mx-0 w-full h-full justify-self-end justify-center items-center",
+        maxWidthClass
+      )}
     >
       <svg height={trianglePlotDim + padding} width={trianglePlotDim + padding}>
         <g transform={`translate(${padding / 2}, ${padding / 2})`}>
@@ -46,6 +62,7 @@ export const TernaryPlot = () => {
           labelOffset={labelOffset}
           padding={padding}
           trianglePlotDim={trianglePlotDim}
+          labelValues={labelValues}
         />
         <TernaryPlotPoint
           half={half}

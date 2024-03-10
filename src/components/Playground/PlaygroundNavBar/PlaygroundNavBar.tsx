@@ -17,6 +17,11 @@ const options = [
     icon: <ClusterAnalysisIcon />,
     link: "cluster-analysis",
   },
+  {
+    label: "Ternary Plot",
+    icon: <ClusterAnalysisIcon />,
+    link: "ternary-plot",
+  },
 ];
 
 interface Props {

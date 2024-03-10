@@ -15,7 +15,7 @@ export default function PlaygroundLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="m-12 grow flex flex-col space-y-8">
+    <section className="m-4 md:m-12 grow flex flex-col space-y-8">
       <nav className="flex gap-x-2 items-center">
         <Link
           href="/"

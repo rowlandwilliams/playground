@@ -24,7 +24,7 @@ const Sankey = () => {
 
   return (
     <div
-      className="relative w-full  space-y-4 overflow-auto bg-zinc-100 dark:bg-chart-gray py-6 rounded-md"
+      className="relative w-full h-full space-y-4 overflow-auto bg-zinc-100 dark:bg-chart-gray py-6 rounded-md"
       ref={ref}
     >
       <SankeySvg links={links as TransformedLink[]} nodes={nodes} />

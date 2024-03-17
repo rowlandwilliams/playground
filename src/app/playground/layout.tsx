@@ -1,6 +1,8 @@
+import { InfoIcon } from "@/components/Icons/InfoIcon/InfoIcon";
 import { TwentyFourHoursIcon } from "@/components/Icons/TwentyFourHoursIcon/TwentyFourHoursIcon";
 import { ThemeToggle } from "@/components/Navbar/ThemeToggle/ThemeToggle";
 import { PlaygroundNavBar } from "@/components/Playground/PlaygroundNavBar/PlaygroundNavBar";
+import { PlaygroundVizButton } from "@/components/Playground/PlaygroundVizButton/PlaygroundVizButton";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -27,10 +29,7 @@ export default function PlaygroundLayout({
         </nav>
         <PlaygroundNavBar isDesktop />
       </section>
-      <section className="flex space-y-4 rounded-md flex-col gap-x-4 grow overflow-hidden bg-chart-gray">
-        <h1>some</h1>
-        {children}
-      </section>
+      {children}
     </section>
   );
 }

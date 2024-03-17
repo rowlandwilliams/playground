@@ -31,7 +31,7 @@ export const MainGraph = () => {
   return (
     <div
       className={classNames(
-        "w-full md:w-1/2 h-1/2 md:h-full transition-opacity duration-200",
+        "w-full md:w-1/2 h-[400px] md:h-full transition-opacity duration-200",
         {
           "opacity-0": isLoading,
           "opacity-100": !isLoading,
@@ -39,7 +39,7 @@ export const MainGraph = () => {
       )}
       ref={ref}
     >
-      <svg width="100%" height="100%">
+      <svg width="100%" height={graphHeight} className="">
         <g
           id="x-axis-main"
           transform={`translate(0,${graphHeight - graphMargin.top})`}

@@ -9,6 +9,7 @@ import { TransformedLink } from "@/types/types";
 import { SankeySvg } from "./SankeySvg/SankeySvg";
 import { SankeyLinkTooltip } from "./SankeyLinkTooltip/SankeyLinkTooltip";
 import { useResponsiveGraphDims } from "@/hooks/useResponsiveGraphWidth";
+import { PlaygroundVizWrapper } from "../PlaygroundVizWrapper/PlaygroundVizWrapper";
 
 const sankeyData = getSankeyDataFromRaw(southAfricaRaw, southAfricaProvinces);
 
@@ -22,15 +23,30 @@ const Sankey = () => {
     sankeyData
   );
 
-  return (
-    <div
-      className="relative w-full  space-y-4 overflow-auto bg-zinc-100 dark:bg-chart-gray py-6 rounded-md"
-      ref={ref}
-    >
-      <SankeySvg links={links as TransformedLink[]} nodes={nodes} />
-      <SankeyNodeTooltip />
-      <SankeyLinkTooltip />
+  const tooltipContent = (
+    <div className="w-60 space-y-2">
+      <p>Sankey diagram showing internal migration within a country.</p>
     </div>
+  );
+
+  return (
+    <PlaygroundVizWrapper
+      tooltipContent={tooltipContent}
+      codeLink="https://github.com/rowlandwilliams/playground/tree/main/src/components/Playground/Sankey"
+    >
+      <div
+        className="relative w-full grow h-[500px] space-y-4 overflow-auto bg-zinc-100 dark:bg-chart-gray pb-6 rounded-md"
+        ref={ref}
+      >
+        <SankeySvg
+          links={links as TransformedLink[]}
+          nodes={nodes}
+          graphHeight={graphHeight}
+        />
+        <SankeyNodeTooltip />
+        <SankeyLinkTooltip />
+      </div>
+    </PlaygroundVizWrapper>
   );
 };
 

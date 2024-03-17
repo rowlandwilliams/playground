@@ -22,10 +22,12 @@ export const ZoomGraph = () => {
     selectAll(".tick > line, .domain").attr("stroke-width", "0.1");
   }, [graphWidth, graphHeight, zoomGraphDomains]);
 
+console.log(graphHeight)
+
   return (
     <div
       className={classNames(
-        "relative w-full md:w-1/2 h-1/2 md:h-full transition-opacity duration-200 ",
+        "relative w-full md:w-1/2 h-[400px] md:h-full transition-opacity duration-200 ",
         {
           "opacity-0": isLoading,
           "opacity-100": !isLoading,

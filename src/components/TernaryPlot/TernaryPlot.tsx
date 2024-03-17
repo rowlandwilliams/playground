@@ -30,7 +30,7 @@ export const TernaryPlot = ({
     <div
       ref={ref}
       className={classNames(
-        "flex mx-auto sm:mx-0 w-full h-full justify-self-end justify-center items-center",
+        "flex mx-auto sm:mx-0 grow w-full h-full justify-self-end justify-center items-center",
         maxWidthClass
       )}
     >

@@ -35,10 +35,14 @@ const Sankey = () => {
       codeLink="https://github.com/rowlandwilliams/playground/tree/main/src/components/Playground/Sankey"
     >
       <div
-        className="relative w-full h-full space-y-4 overflow-auto bg-zinc-100 dark:bg-chart-gray pb-6 rounded-md"
+        className="relative w-full grow h-[500px] space-y-4 overflow-auto bg-zinc-100 dark:bg-chart-gray pb-6 rounded-md"
         ref={ref}
       >
-        <SankeySvg links={links as TransformedLink[]} nodes={nodes} />
+        <SankeySvg
+          links={links as TransformedLink[]}
+          nodes={nodes}
+          graphHeight={graphHeight}
+        />
         <SankeyNodeTooltip />
         <SankeyLinkTooltip />
       </div>

@@ -23,7 +23,7 @@ export const ClusterAnalysis = () => {
     >
       <section
         className={classNames(
-          "flex flex-col grow space-y-4 overflow-auto h-full  dark:bg-chart-gray rounded-md"
+          "flex flex-col grow space-y-4 overflow-auto h-full  dark:bg-chart-gray"
         )}
       >
         <Scatterplots />

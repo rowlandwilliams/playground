@@ -8,11 +8,12 @@ import { TransformedLink } from "@/types/types";
 interface Props {
   links: TransformedLink[];
   nodes: SankeyNodeMinimal<Record<string, never>, Record<string, never>>[];
+  graphHeight: number;
 }
 
 export const SankeySvg = ({ links, nodes }: Props) => {
   return (
-    <svg width="100%" height="100%">
+    <svg width="100%" height="100%" className="">
       <SankeyLinkGradients links={links as TransformedLink[]} />
       <g
         transform={`translate(${sankeyMargin.left}, ${sankeyMargin.top})`}

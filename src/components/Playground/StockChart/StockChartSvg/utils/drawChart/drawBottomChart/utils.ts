@@ -54,8 +54,7 @@ export const updateBrushOnMove = (
       xBottom(activeDatesDomain[1]),
     ])
     .select(".selection") // color brush
-    .attr("fill", brushColor)
-    .attr("stroke", brushColor);
+    
 };
 
 export const updateBottomAreaWhileBrushing = (

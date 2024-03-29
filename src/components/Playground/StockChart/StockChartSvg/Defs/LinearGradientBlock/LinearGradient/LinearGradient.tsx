@@ -1,4 +1,5 @@
 import { bottomChartHeight, margin } from "../../../utils/utils";
+import { useThemeColor } from "@/hooks/useThemeColor";
 
 interface Props {
   gradientId: string;
@@ -13,6 +14,9 @@ export const LinearGradient = ({
   chartHeight,
   isTopChart = false,
 }: Props) => {
+  const { isDark } = useThemeColor();
+  const baseGradientColor = isDark ? "#1A1B3E" : "#f4f4f5";
+
   return (
     <>
       <linearGradient
@@ -24,7 +28,7 @@ export const LinearGradient = ({
         y2={isTopChart ? chartHeight : bottomChartHeight - margin}
       >
         <stop stopColor={gradientColor} offset="0" />
-        <stop stopColor="#1A1B3E" offset="1" />
+        <stop stopColor={baseGradientColor} offset="1" opacity={0} />
       </linearGradient>
     </>
   );

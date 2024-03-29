@@ -79,12 +79,9 @@ export const Projects = () => {
 
   return (
     <section className="font-light text-zinc-700">
-      <Link
-        href="/projects"
-        className="font-medium text-zinc-900 text-base dark:text-zinc-200"
-      >
+      <h1 className="font-medium text-zinc-900 text-base dark:text-zinc-200">
         Projects
-      </Link>
+      </h1>
       <div className="divide-y dark:divide-zinc-700">
         {projects.map((project, i) => (
           <Project

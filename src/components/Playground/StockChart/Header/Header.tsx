@@ -13,8 +13,8 @@ interface Props {
 export const Header = ({ companyTicker, latestStock, latestDate }: Props) => {
   return (
     <>
-      <div className="flex bg-chart-gray rounded-t-md justify-between sm:items-end">
-        <div className="flex flex-col sm:flex-row">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-4 text-zinc-800 dark:text-zinc-200 rounded-t-md justify-between ">
+        <div className="flex gap-4">
           <HeaderText
             boldText={companyTicker.toUpperCase()}
             subText={companyStockData[companyTicker].name}
@@ -25,15 +25,10 @@ export const Header = ({ companyTicker, latestStock, latestDate }: Props) => {
             boldTextMarginRight={2}
           />
         </div>
-
-        <div className="hidden sm:flex">
-          <HeaderLegend stockKeys={stockKeys} />
-        </div>
-
-        <TimeLabels latestDate={latestDate} />
-      </div>
-      <div className="flex sm:hidden mt-4">
         <HeaderLegend stockKeys={stockKeys} />
+        <div className="flex w-full justify-end">
+          <TimeLabels latestDate={latestDate} />
+        </div>
       </div>
     </>
   );

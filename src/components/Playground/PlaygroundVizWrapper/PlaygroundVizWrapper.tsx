@@ -16,7 +16,7 @@ export const PlaygroundVizWrapper = ({
   tooltipContent = undefined,
 }: Props) => {
   return (
-    <section className="flex rounded-md flex-col gap-x-4 grow overflow-hidden bg-zinc-100 dark:bg-chart-gray">
+    <section className="flex rounded-md flex-col gap-x-4 grow overflow-hidden bg-zinc-100 shadow-md border border-gray-100 dark:border-none dark:bg-chart-gray">
       <header className="p-4 flex justify-end divide-zinc-200 dark:divide-zinc-600 gap-x-2">
         {tooltipContent && (
           <PlaygroundVizButton tooltipContent={tooltipContent}>

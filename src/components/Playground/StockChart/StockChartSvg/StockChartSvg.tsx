@@ -159,7 +159,7 @@ Props) => {
     });
 
   return (
-    <div className="w-full bg-chart-gray rounded-b-md" ref={parentRef}>
+    <div className="w-full rounded-b-md" ref={parentRef}>
       <svg width="100%" height={svgHeight} id={`chart-svg-${companyTicker}`}>
         <BottomChartClipPath />
         <Defs stockKeys={stockKeys} />

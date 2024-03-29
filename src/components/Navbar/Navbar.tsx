@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <header className="max-w-[700px] mx-auto">
+    <header className="max-w-[750px] mx-auto">
       <div className="flex justify-between items-center">
         <Link
           href="/"

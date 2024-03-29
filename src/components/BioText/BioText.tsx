@@ -5,7 +5,7 @@ export const BioText = () => {
     <>
       <section className="text-xl space-y-8 hidden sm:block mt-2 font-light text-zinc-900 dark:text-zinc-100">
         <p className="text-2xl">
-          Hi — I&apos;m Rowland, a Software Engineer interested in Data
+          Hi — I&apos;m Rowland, a Software Engineer interested in Maps & Data
           Visualisation.
         </p>
         <p className="text-zinc-600 dark:text-zinc-400 text-base lg:text-base">
@@ -15,7 +15,7 @@ export const BioText = () => {
       </section>
       <section className="sm:hidden text-3xl space-y-8 font-[450] dark:font-normal text-black dark:text-zinc-100">
         <p>
-          Hi — I&apos;m Rowland, a Software Engineer interested in Data
+          Hi — I&apos;m Rowland, a Software Engineer interested in Maps & Data
           Visualisation.
         </p>
         <p className="text-lg sm:text-xl font-light text-zinc-500 dark:text-zinc-400">

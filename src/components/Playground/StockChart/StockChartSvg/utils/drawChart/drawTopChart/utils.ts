@@ -14,6 +14,7 @@ import {
   TooltipDifferenceObject,
 } from "@/types/playground/stock-chart";
 import { setTooltipDifference } from "@/components/Playground/StockChart/actions";
+import { useThemeColor } from "@/hooks/useThemeColor";
 
 export const focusDateTextRectWidth = 65;
 
@@ -61,7 +62,6 @@ export const addFocusLineCirclesAndText = (
 ) => {
   focusDateText
     .data(convertedData)
-    .attr("fill", "white")
     .attr("font-size", "0.6rem");
 
   focusDateTextRect.attr("width", focusDateTextRectWidth);

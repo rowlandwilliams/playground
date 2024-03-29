@@ -6,9 +6,9 @@ interface Props {
 
 export const HeaderText = ({ boldText, subText }: Props) => {
   return (
-    <div className="flex text-sm items-center sm:mr-8">
+    <div className="flex text-sm whitespace-nowrap items-center sm:mr-8">
       <div className="mr-2">{boldText}</div>
-      <div className="opacity-20">{subText}</div>
+      <div className="opacity-40">{subText}</div>
     </div>
   );
 };

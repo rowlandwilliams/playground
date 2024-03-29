@@ -8,12 +8,14 @@ import { Header } from "./Header/Header";
 import { Provider } from "react-redux";
 import { store } from "./reducers";
 import { PlaygroundVizWrapper } from "../PlaygroundVizWrapper/PlaygroundVizWrapper";
+import classNames from "classnames";
 
 interface Props {
   companyTicker: string;
+  noVizWrapper?: boolean;
 }
 
-export const StockChart = ({ companyTicker }: Props) => {
+export const StockChart = ({ companyTicker, noVizWrapper = false }: Props) => {
   const [chartIsHovered, setChartIsHovered] = useState(false);
 
   // define company data based on provided company name
@@ -35,6 +37,34 @@ export const StockChart = ({ companyTicker }: Props) => {
     </div>
   );
 
+  const content = (
+    <Provider store={store}>
+      <div
+        className={classNames(
+          "w-full px-4  mb-2 dark:bg-chart-gray text-white font-medium rounded-lg",
+          { "pt-4": noVizWrapper }
+        )}
+        id="chart-container"
+        onMouseEnter={() => setChartIsHovered(true)}
+        onMouseLeave={() => setChartIsHovered(false)}
+      >
+        <Header
+          companyTicker={companyTicker}
+          latestStock={high}
+          latestDate={date}
+        />
+        <StockChartSvg
+          stockData={stockData}
+          activeTimeLabelObject={activeTimeLabelObject}
+          companyTicker={companyTicker}
+          latestDate={date}
+          chartIsHovered={chartIsHovered}
+          latestStock={high}
+        />
+      </div>
+    </Provider>
+  );
+
   return (
     <PlaygroundVizWrapper
       tooltipContent={tooltipContent}
@@ -42,7 +72,10 @@ export const StockChart = ({ companyTicker }: Props) => {
     >
       <Provider store={store}>
         <div
-          className="w-full px-4  mb-2 dark:bg-chart-gray text-white font-medium rounded-lg"
+          className={classNames(
+            "w-full px-4  mb-2 dark:bg-chart-gray text-white font-medium rounded-lg",
+            { "pt-4": noVizWrapper }
+          )}
           id="chart-container"
           onMouseEnter={() => setChartIsHovered(true)}
           onMouseLeave={() => setChartIsHovered(false)}

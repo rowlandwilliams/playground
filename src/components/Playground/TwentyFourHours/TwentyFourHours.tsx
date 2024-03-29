@@ -74,7 +74,7 @@ export const Visualisation = () => {
       tooltipContent={tooltipContent}
       codeLink="https://github.com/rowlandwilliams/playground/blob/main/src/components/Playground/TwentyFourHours/TwentyFourHours.tsx"
     >
-      <div className="flex flex-col grow space-y-4 overflow-auto bg-zinc-100 dark:bg-chart-gray pt-8 pb-2 px-4 rounded-md">
+      <div className="flex flex-col grow space-y-4 overflow-auto min-h-[500px] bg-zinc-100 dark:bg-chart-gray pt-8 pb-2 px-4 rounded-md">
         <div className="grow min-w-[1000px] overflow-x-auto" ref={lineGraphRef}>
           {loaded && (
             <svg

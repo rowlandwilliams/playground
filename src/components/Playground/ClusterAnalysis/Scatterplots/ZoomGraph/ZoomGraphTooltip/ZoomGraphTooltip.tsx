@@ -22,7 +22,7 @@ export const ZoomGraphTooltip = ({
   return (
     <article
       className={classNames(
-        "absolute bg-white rounded-sm pointer-events-none transition-opacity duration-500 -translate-y-full -translate-x-1/2",
+        "absolute bg-white rounded-md pointer-events-none transition-opacity duration-500 -translate-y-full -translate-x-1/2",
         {
           "opacity-0": !pointIsHovered,
           "opacity-100": pointIsHovered,

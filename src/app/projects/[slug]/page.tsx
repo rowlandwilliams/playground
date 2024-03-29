@@ -35,7 +35,7 @@ export default async function Project({
       ) : (
         <iframe
           src="https://co2widget.com/embed/index.html"
-          className="h-[600px] w-full bg-white rounded-sm"
+          className="h-[600px] w-full bg-white rounded-md"
         ></iframe>
       )}
 

@@ -20,7 +20,7 @@ export const ZoomGraphTooltipRow = ({
       <p>{metric}:</p>
       <p
         className={classNames(
-          "px-2 bg-opacity-10 w-12 rounded-sm text-center font-medium",
+          "px-2 bg-opacity-10 w-12 rounded-md text-center font-medium",
           [bgClass, textClass, borderClass]
         )}
       >

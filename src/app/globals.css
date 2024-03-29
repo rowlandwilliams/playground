@@ -15,5 +15,5 @@ body {
 }
 
 .text-button {
-  @apply hover:bg-zinc-100 text-zinc-400 dark:text-zinc-300 dark:hover:bg-zinc-600 h-6 w-6 flex items-center justify-center rounded-sm;
+  @apply hover:bg-zinc-100 text-zinc-400 dark:text-zinc-300 dark:hover:bg-zinc-600 h-6 w-6 flex items-center justify-center rounded-md;
 }

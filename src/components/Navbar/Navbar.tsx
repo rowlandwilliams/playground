@@ -18,7 +18,7 @@ export const Navbar = () => {
           <Link
             href={"https://github.com/rowlandwilliams"}
             target="_blank"
-            className="hover:bg-zinc-100 dark:hover:bg-zinc-600 h-6 w-6 flex items-center justify-center rounded-sm"
+            className="hover:bg-zinc-100 dark:hover:bg-zinc-600 h-6 w-6 flex items-center justify-center rounded-md"
           >
             <svg
               width="16"

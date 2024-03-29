@@ -39,7 +39,7 @@ export const DesktopProjectImages = ({ projectImages, vertical }: Props) => {
               width={graphWidth}
               height={graphWidth * aspectRatio}
               alt=""
-              className="object-contain object-top rounded-sm"
+              className="object-contain object-top rounded-md"
             />
           ))}
         </div>

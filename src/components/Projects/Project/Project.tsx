@@ -64,7 +64,7 @@ export const Project = ({
               }
             }}
             className={classNames(
-              "hover:bg-zinc-100 text-zinc-600 dark:text-zinc-300 dark:hover:bg-zinc-600 h-6 w-6 flex items-center justify-center rounded-sm",
+              "hover:bg-zinc-100 text-zinc-600 dark:text-zinc-300 dark:hover:bg-zinc-600 h-6 w-6 flex items-center justify-center rounded-md",
               { "text-2xl": active, "text-xl": !active }
             )}
           >

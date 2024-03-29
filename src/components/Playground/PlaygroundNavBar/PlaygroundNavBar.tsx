@@ -6,8 +6,8 @@ import { StockChartIcon } from "@/components/Icons/StockChartIcon/StockChartIcon
 import { TriangleIcon } from "@/components/Icons/TriangleIcon/TriangleIcon";
 import { TwentyFourHoursIcon } from "@/components/Icons/TwentyFourHoursIcon/TwentyFourHoursIcon";
 import classNames from "classnames";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { PlaygroundNavbarOption } from "./PlaygroundNavBarOption/PlaygroundNavBarOption";
 
 const options = [
   {
@@ -53,20 +53,14 @@ export const PlaygroundNavBar = ({ isDesktop }: Props) => {
       })}
     >
       {options.map(({ label, icon, link }) => (
-        <Link
+        <PlaygroundNavbarOption
           key={label}
-          href={`/playground/${link}`}
-          className={classNames(
-            "flex whitespace-nowrap gap-x-2 items-center px-4 py-2 rounded-md",
-            {
-              "bg-zinc-200 dark:bg-zinc-700  font-medium": activeViz === link,
-              "hover:bg-zinc-100 dark:hover:bg-zinc-800": activeViz !== link,
-            }
-          )}
-        >
-          {icon}
-          {isDesktop && <p>{label}</p>}
-        </Link>
+          label={label}
+          icon={icon}
+          link={link}
+          isActive={activeViz === link}
+          isDesktop={isDesktop}
+        />
       ))}
     </nav>
   );

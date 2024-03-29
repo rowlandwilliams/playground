@@ -20,7 +20,7 @@ export default function Home() {
           <TernaryPlot />
         </div>
         <Projects />
-        <section className="font-light text-zinc-700 space-y-4 dark:text-zinc-300">
+        <section className="font-light text-zinc-700 space-y-6 dark:text-zinc-300">
           <header className="space-y-2">
             <div className="flex justify-between items-center">
               <Link

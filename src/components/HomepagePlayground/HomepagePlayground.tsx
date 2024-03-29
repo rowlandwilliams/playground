@@ -45,7 +45,7 @@ export const HomepagePlayground = () => {
             {"->"}
           </Link>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col xs:flex-row gap-4 xs:items-center xs:justify-between">
           <h2>A collection of data visualisations and experiments</h2>
           <nav className="flex gap-x-2">
             {vizOptions.map(({ state, icon }) => (

@@ -27,6 +27,7 @@ const config: Config = {
         "chart-grid-grey": "#9F9F9F",
         "light-gray": "#f0f5fc",
       },
+      screens: { xs: "475px" },
     },
   },
   plugins: [],

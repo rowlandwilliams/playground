@@ -21,12 +21,12 @@ export const PlaygroundNavbarOption: React.FC<Props> = ({
   handleClick = undefined,
 }) => {
   const className = classNames(
-    "flex whitespace-nowrap gap-x-2 items-center justify-center rounded-md",
+    "flex whitespace-nowrap gap-x-2 items-center rounded-md",
     {
-      "bg-zinc-200 dark:bg-zinc-700  font-medium": isActive,
+      "bg-zinc-200 dark:bg-zinc-700 font-medium": isActive,
       "hover:bg-zinc-100 dark:hover:bg-zinc-800": !isActive,
       "px-4 py-2": isDesktop,
-      "w-8 h-8": !isDesktop,
+      "w-8 h-8 justify-center shrink-0": !isDesktop,
     }
   );
 

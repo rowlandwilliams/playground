@@ -1,5 +1,5 @@
-import { Visualisation } from "@/components/Playground/TwentyFourHours/TwentyFourHours";
+import { TwentyFourHours } from "@/components/Playground/TwentyFourHours/TwentyFourHours";
 
 export default function TwentyFourHourEvents() {
-  return <Visualisation />;
+  return <TwentyFourHours />;
 }

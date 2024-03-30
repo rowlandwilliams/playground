@@ -16,7 +16,7 @@ interface Props {
 export const TernaryPlot = ({
   useHeight = false,
   maxWidthClass = "max-w-[300px]",
-  labelValues = ["Developer", "Artist", "Designer"],
+  labelValues = ["Developer", "Scientist", "Designer"],
 }: Props) => {
   const { ref, graphWidth, graphHeight } = useResponsiveGraphDims();
 

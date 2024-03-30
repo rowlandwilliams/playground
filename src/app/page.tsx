@@ -2,8 +2,6 @@ import { BioText } from "@/components/BioText/BioText";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { Projects } from "@/components/Projects/Projects";
 import { TernaryPlot } from "@/components/TernaryPlot/TernaryPlot";
-import Link from "next/link";
-import { StockChart } from "@/components/Playground/StockChart/StockChart";
 import { HomepagePlayground } from "@/components/HomepagePlayground/HomepagePlayground";
 
 export default function Home() {

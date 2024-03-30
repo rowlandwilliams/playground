@@ -8,8 +8,13 @@ import { nMinPerHour } from "./utils/numbers";
 import { scaleBand, scaleLinear } from "@visx/scale";
 import { Bar } from "@visx/shape";
 import { PlaygroundVizWrapper } from "../PlaygroundVizWrapper/PlaygroundVizWrapper";
+import { NavbarPlaygroundLink } from "@/components/Navbar/NavbarPlaygroundLink/NavbarPlaygroundLink";
 
-export const Visualisation = () => {
+interface Props {
+  isHomepage?: boolean;
+}
+
+export const TwentyFourHours = ({ isHomepage = false }: Props) => {
   const [activeHour, setActiveHour] = useState(11);
   const handleHourGroupClick = (hour: number) => setActiveHour(hour);
 
@@ -69,10 +74,15 @@ export const Visualisation = () => {
     </div>
   );
 
+  const title = isHomepage ? (
+    <NavbarPlaygroundLink text="View more" noIcon />
+  ) : undefined;
+
   return (
     <PlaygroundVizWrapper
       tooltipContent={tooltipContent}
       codeLink="https://github.com/rowlandwilliams/playground/blob/main/src/components/Playground/TwentyFourHours/TwentyFourHours.tsx"
+      title={title}
     >
       <div className="flex flex-col grow space-y-4 overflow-auto min-h-[580px] bg-zinc-100 dark:bg-chart-gray pt-8 pb-2 px-4 rounded-md">
         <div className="grow min-w-[1000px] overflow-x-auto" ref={lineGraphRef}>

@@ -35,7 +35,7 @@ export const Project = ({
             <a
               href={url}
               target="_blank"
-              className="underline font-normal underline-offset-[3px] dark:text-zinc-300"
+              className="underline font-normal underline-offset-[3px] text-zinc-900 dark:text-zinc-300"
             >
               {name}
             </a>

@@ -12,7 +12,7 @@ export const NavbarPlaygroundLink = ({
   return (
     <Link
       href={"/playground/twenty-four-hours"}
-      className="flex gap-x-2 items-center bg-orange-300 dark:bg-orange-500 px-4 rounded-full py-0.5 bg-opacity-20 dark:bg-opacity-20 dark:border-none text-orange-600 border border-orange-200 shadow-sm dark:hover:text-green-400 dark:text-yellow-300 font-medium"
+      className="flex gap-x-2 text-xs items-center bg-orange-300 dark:bg-orange-500 px-4 rounded-full py-0.5 bg-opacity-20 dark:bg-opacity-20 dark:border-none text-orange-600 border border-orange-200 shadow-sm dark:hover:text-green-400 dark:text-yellow-300 font-medium"
     >
       {!noIcon && (
         <svg

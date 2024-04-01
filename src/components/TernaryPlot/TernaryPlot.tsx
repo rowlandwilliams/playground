@@ -15,22 +15,23 @@ interface Props {
 
 export const TernaryPlot = ({
   useHeight = false,
-  maxWidthClass = "max-w-[300px]",
+  maxWidthClass = "max-w-[320px]",
   labelValues = ["Developer", "Scientist", "Designer"],
 }: Props) => {
-  const { ref, graphWidth, graphHeight } = useResponsiveGraphDims();
+  const { ref, graphHeight } = useResponsiveGraphDims();
 
   const padding = 65;
-  const dim = useHeight ? graphHeight : graphWidth;
+  const dim = useHeight ? graphHeight : 320;
   const trianglePlotDim = dim - padding;
 
   const half = trianglePlotDim / 2;
   const labelOffset = 10;
+
   return (
     <div
       ref={ref}
       className={classNames(
-        "flex mx-auto sm:mx-0 grow w-full h-full justify-self-end justify-center items-center",
+        "flex mx-auto sm:mx-0 grow w-full h-full min-h-[320px] justify-self-end justify-center items-center",
         maxWidthClass
       )}
     >

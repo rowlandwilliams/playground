@@ -9,7 +9,7 @@ export default function Home() {
     <main className="flex px-8 flex-col items-center my-12">
       <article className="w-full max-w-[750px] space-y-20">
         <Navbar />
-        <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 animate-fade-in-up">
           <BioText />
           <div className="hidden sm:flex sm:justify-end min-h-[300px]">
             <TernaryPlot />

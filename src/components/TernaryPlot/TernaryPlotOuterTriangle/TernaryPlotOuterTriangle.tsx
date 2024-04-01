@@ -7,7 +7,7 @@ interface Props {
 export const TernaryPlotOuterTriangle = ({
   half,
   trianglePlotDim,
-  triangleClass = "fill-none dark:fill-zinc-900",
+  triangleClass = "fill-none",
 }: Props) => {
   return (
     <polygon

@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar/Navbar";
 import { Projects } from "@/components/Projects/Projects";
 import { TernaryPlot } from "@/components/TernaryPlot/TernaryPlot";
 import { HomepagePlayground } from "@/components/HomepagePlayground/HomepagePlayground";
+import { Footer } from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         </div>
         <Projects />
         <HomepagePlayground />
+        <Footer />
       </article>
     </main>
   );

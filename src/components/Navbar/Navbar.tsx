@@ -21,7 +21,6 @@ export const Navbar = () => {
           Design Technologist
           <div className="h-3 w-3 rounded-full bg-gradient-to-br from-blue-700 dark:from-teal-400 via-rose-600 dark:via-blue-600 to-yellow-400 dark:to-yellow-200"></div>
         </h2>
-        <NavbarPlaygroundLink />
       </div>
     </header>
   );

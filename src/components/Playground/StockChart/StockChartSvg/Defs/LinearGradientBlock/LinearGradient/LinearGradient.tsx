@@ -15,7 +15,7 @@ export const LinearGradient = ({
   isTopChart = false,
 }: Props) => {
   const { isDark } = useThemeColor();
-  const baseGradientColor = isDark ? "#1A1B3E" : "#f4f4f5";
+  const baseGradientColor = isDark ? "#1D2025" : "#f4f4f5";
 
   return (
     <>

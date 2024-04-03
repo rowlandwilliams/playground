@@ -17,18 +17,16 @@ export const BioText = () => {
           <BioTextLinks />
         </div>
       </section>
-      <section className="sm:hidden text-3xl space-y-8 font-[450] text-zinc-800 dark:text-zinc-100">
+      <section className="sm:hidden text-3xl space-y-10 text-zinc-800 dark:text-zinc-100">
         <p className="font-haas">
-          Hi — I&apos;m Rowland, a Software Engineer interested in Maps & Data
-          Visualisation.
+          Hi — I&apos;m Rowland, <br className="xs:hidden" /> a Software
+          Engineer interested in Maps & Data Visualisation.
         </p>
-        <div className="space-y-4">
-          <p className="text-lg sm:text-xl font-light text-zinc-500 dark:text-zinc-400">
-            I connect data, design and technology to build apps that explore and
-            visualise complex information.
-          </p>
-          <BioTextLinks />
-        </div>
+        <p className="text-base sm:text-xl font-light text-zinc-500 dark:text-zinc-400">
+          I connect data, design and technology to build apps that explore and
+          visualise complex information.
+        </p>
+        <BioTextLinks />
       </section>
     </>
   );

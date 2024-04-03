@@ -8,7 +8,7 @@ import { Footer } from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <main className="flex px-8 flex-col items-center my-12">
-      <article className="w-full max-w-[750px] space-y-20">
+      <article className="w-full max-w-[750px] space-y-16 sm:space-y-20">
         <Navbar />
         <div className="grid grid-cols-1 sm:grid-cols-2 animate-fade-in-up">
           <BioText />

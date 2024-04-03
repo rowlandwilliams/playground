@@ -16,7 +16,7 @@ export const Navbar = () => {
         </Link>
         <ThemeToggle />
       </div>
-      <div className="flex justify-between items-center font-light text-zinc-600 dark:text-zinc-400">
+      <div className="flex justify-between xs:font-light items-center text-zinc-500 dark:text-zinc-400">
         <h2 className="text-sm sm:text-xs flex items-center gap-x-2 ">
           Design Technologist
           <div className="h-3 w-3 rounded-full bg-gradient-to-br from-blue-700 dark:from-teal-400 via-rose-600 dark:via-blue-600 to-yellow-400 dark:to-yellow-200"></div>

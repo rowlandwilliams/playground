@@ -27,7 +27,7 @@ export default function RootLayout({
         className={classNames(
           inter.variable,
           haas.variable,
-          "bg-gray-50 dark:bg-zinc-950 font-inter min-h-screen flex flex-col text-body text-xs"
+          "bg-gradient-tp- dark:bg-zinc-950 font-inter min-h-screen flex flex-col text-body text-xs"
         )}
       >
         <Providers>{children}</Providers>

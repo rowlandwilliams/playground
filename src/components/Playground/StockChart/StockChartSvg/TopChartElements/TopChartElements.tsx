@@ -37,7 +37,7 @@ export const TopChartElements = ({
           id="tooltip-date-rect"
           width={focusDateTextRectWidth}
           height="20px"
-          className="fill-zinc-100 dark:fill-chart-gray"
+          className="fill-zinc-50 dark:fill-chart-gray"
         ></rect>
         <text
           id="tooltip-date-text"

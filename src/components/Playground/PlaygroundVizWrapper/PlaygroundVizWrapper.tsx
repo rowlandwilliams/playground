@@ -41,7 +41,7 @@ export const PlaygroundVizWrapper = ({
   );
 
   return (
-    <section className="flex rounded-md flex-col gap-x-4 grow overflow-hidden bg-zinc-100 shadow-md border border-gray-100 dark:border-none dark:bg-chart-gray">
+    <section className="flex rounded-md flex-col gap-x-4 grow overflow-hidden bg-zinc-50 shadow-md border dark:border-none dark:bg-chart-gray">
       {title ? (
         <header className="flex justify-between items-center px-4 pt-4">
           {title}

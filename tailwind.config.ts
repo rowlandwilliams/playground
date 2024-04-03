@@ -11,6 +11,10 @@ const config: Config = {
   safelist: [...safeList],
   theme: {
     extend: {
+      fontFamily: {
+        haas: ["var(--font-haas)"],
+        inter: ["var(--font-inter)"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

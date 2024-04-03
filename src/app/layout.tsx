@@ -3,9 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import classNames from "classnames";
 import { Providers } from "./providers";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
-
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const haas = localFont({
+  src: "../fonts/NeueHaasDisplayRoman.ttf",
+  display: "swap",
+  variable: "--font-haas",
+});
 export const metadata: Metadata = {
   title: "Rowland Williams",
   description: "Design Technologist",
@@ -20,8 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={classNames(
-          inter.className,
-          "bg-gray-50 dark:bg-zinc-950 min-h-screen flex flex-col text-body text-xs"
+          inter.variable,
+          haas.variable,
+          "bg-gray-50 dark:bg-zinc-950 font-inter min-h-screen flex flex-col text-body text-xs"
         )}
       >
         <Providers>{children}</Providers>

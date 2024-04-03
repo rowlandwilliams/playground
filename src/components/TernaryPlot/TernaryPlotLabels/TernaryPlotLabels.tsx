@@ -14,11 +14,11 @@ export const TernaryPlotLabels = ({
   labelValues,
 }: Props) => {
   return (
-    <g className="text-xs">
+    <g className="text-xs font-haas">
       <text
         x={half}
         y={-labelOffset}
-        className="fill-zinc-600 dark:fill-white"
+        className="fill-zinc-900 dark:fill-white"
         textAnchor="middle"
         dominantBaseline="hanging"
         transform={`translate(${padding / 2},20)`}
@@ -26,15 +26,15 @@ export const TernaryPlotLabels = ({
         {labelValues[0]}
       </text>
       <text
-        className="fill-zinc-600 dark:fill-white"
-        x={trianglePlotDim + padding - 5}
+        className="fill-zinc-900 dark:fill-white"
+        x={trianglePlotDim + padding - 10}
         y={trianglePlotDim + padding - labelOffset}
         textAnchor="end"
       >
         {labelValues[1]}
       </text>
       <text
-        className="fill-zinc-600 dark:fill-white"
+        className="fill-zinc-900 dark:fill-white"
         x={0}
         y={trianglePlotDim + padding - labelOffset}
         textAnchor="start"

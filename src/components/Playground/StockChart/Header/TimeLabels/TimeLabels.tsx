@@ -19,7 +19,7 @@ export const TimeLabels = ({ latestDate }: Props) => {
           className={classNames(
             "w-8 sm:w-10 ml-2 text-center py-1 rounded-lg bg-opacity-20 cursor-pointer",
             {
-              "bg-zinc-600 dark:text-white":
+              "bg-zinc-400 dark:text-white":
                 labelObject.domain[0] === visibleDatesDomain[0],
               "text-zinc-400  hover:bg-bar_colour hover:bg-opacity-20 hover:text-chart_background":
                 labelObject.domain[0] !== visibleDatesDomain[0],

@@ -10,7 +10,7 @@ export const Navbar = () => {
       <div className="flex justify-between items-center">
         <Link
           href="/"
-          className="flex gap-x-2 items-center py-2  dark:text-zinc-100 text-lg text-zinc-900 font-medium "
+          className="flex font-haas gap-x-2 items-center py-2  dark:text-zinc-100 text-lg text-zinc-900 font-medium "
         >
           Rowland Williams
         </Link>

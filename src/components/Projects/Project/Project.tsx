@@ -35,7 +35,7 @@ export const Project = ({
             <a
               href={url}
               target="_blank"
-              className="underline font-normal underline-offset-[3px] text-zinc-900 dark:text-zinc-300"
+              className="underline font-normal underline-offset-[3px] text-zinc-600 dark:text-zinc-300"
             >
               {name}
             </a>
@@ -72,7 +72,7 @@ export const Project = ({
           </button>
         </div>
         <div className="flex justify-between items-center">
-          <p className="text-zinc-700 dark:text-zinc-300 font-normal">
+          <p className="text-zinc-900 text-[15px] dark:text-zinc-300 font-medium font-haas">
             {description}
           </p>
         </div>

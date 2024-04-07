@@ -10,7 +10,7 @@ export const BioText = () => {
           <br /> Maps & Data Visualisation.
         </p>
         <div className="space-y-4">
-          <p className="text-zinc-600 dark:text-zinc-400 text-base font-light lg:text-base">
+          <p className="text-zinc-700 dark:text-zinc-300 text-base font-light lg:text-base">
             I connect data, design and technology to build apps that explore and
             visualise complex information.
           </p>

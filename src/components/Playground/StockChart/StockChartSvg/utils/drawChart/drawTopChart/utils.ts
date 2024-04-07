@@ -14,7 +14,6 @@ import {
   TooltipDifferenceObject,
 } from "@/types/playground/stock-chart";
 import { setTooltipDifference } from "@/components/Playground/StockChart/actions";
-import { useThemeColor } from "@/hooks/useThemeColor";
 
 export const focusDateTextRectWidth = 65;
 
@@ -60,9 +59,7 @@ export const addFocusLineCirclesAndText = (
   focusDateText: Selection<SVGSVGElement, unknown, HTMLElement, any>,
   focusDateTextRect: Selection<SVGSVGElement, unknown, HTMLElement, any>
 ) => {
-  focusDateText
-    .data(convertedData)
-    .attr("font-size", "0.6rem");
+  focusDateText.data(convertedData).attr("font-size", "0.6rem");
 
   focusDateTextRect.attr("width", focusDateTextRectWidth);
 
@@ -88,6 +85,7 @@ export const addFocusLineCirclesAndText = (
     .attr("class", "tooltip-diff-text")
     .attr("fill", (d, i) => supernovaColors[i]);
 };
+
 // mousmove function for when svg is hovered
 export const mousemove = (
   event: PointerEvent,
@@ -176,7 +174,8 @@ export const mousemove = (
     // translate tooltip rectangle
     focusTextRects
       .attr("rx", 2)
-      .attr("fill", brushColor)
+      .attr("fill", "white")
+      .attr("stroke", "#e5e7eb")
       .attr("width", maxTextWidth)
       .attr("height", "80px")
       .attr("transform", (d: any, i) =>

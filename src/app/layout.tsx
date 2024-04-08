@@ -11,6 +11,7 @@ const haas = localFont({
   display: "swap",
   variable: "--font-haas",
 });
+
 export const metadata: Metadata = {
   title: "Rowland Williams",
   description: "Design Technologist",
@@ -27,7 +28,7 @@ export default function RootLayout({
         className={classNames(
           inter.variable,
           haas.variable,
-          "bg-gradient-tp- dark:bg-zinc-950 font-inter min-h-screen flex flex-col text-body text-xs"
+          "bg-gradient-tp-  dark:bg-zinc-950 font-inter min-h-screen flex flex-col text-body text-xs"
         )}
       >
         <Providers>{children}</Providers>

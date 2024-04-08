@@ -4,9 +4,10 @@ export const BioText = () => {
   return (
     <>
       <section className="text-xl space-y-8 hidden sm:block mt-2 dark:font-light text-zinc-950 dark:text-zinc-100">
-        <p className="text-[1.95rem] font-haas leading-10">
+        <p className="text-[1.9rem] font-haas leading-10">
           Hi — I&apos;m Rowland, a <br />
-          Software Engineer interested in
+          Software Engineer
+          <br /> interested in
           <br /> Maps & Data Visualisation.
         </p>
         <div className="space-y-4">

@@ -37,7 +37,7 @@ const projects = [
       </>
     ),
     tech: ["Next.js", "d3.js", "TypeScript", "GraphQL", "PostgreSQL", "AWS"],
-    role: "CTO / Founding Engineer",
+    role: "Lead Software Engineer",
     isCurrent: true,
   },
   {

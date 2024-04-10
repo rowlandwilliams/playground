@@ -6,7 +6,7 @@ interface Props {
 
 export const Section: React.FC<Props> = ({ children }) => {
   return (
-    <section className="border-b animate-fade-in-up dark:border-zinc-600 py-4">
+    <section className="animate-fade-in-up dark:border-zinc-600 py-4">
       {children}
     </section>
   );

@@ -78,7 +78,7 @@ export const Projects = () => {
   const [activeProject, setActiveProject] = useState<number | undefined>(0);
 
   return (
-    <section className="font-light text-zinc-700 animate-fade-in-up">
+    <section className="font-light text-zinc-700 max-w-[750px] mx-auto animate-fade-in-up">
       <h1 className="font-medium text-zinc-900 text-base dark:text-zinc-200">
         Projects
       </h1>

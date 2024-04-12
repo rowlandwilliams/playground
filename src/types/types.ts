@@ -94,6 +94,7 @@ interface Job {
   timeframe: Timeframe;
   contractType: string[];
   locations: string[];
+  isCurrent?: boolean;
 }
 
 export interface Timeframe {

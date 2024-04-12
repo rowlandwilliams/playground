@@ -7,7 +7,7 @@ body {
 }
 
 .text-header {
-  @apply text-zinc-700 dark:text-zinc-100;
+  @apply text-zinc-900 dark:text-zinc-100;
 }
 
 .text-sub-header {

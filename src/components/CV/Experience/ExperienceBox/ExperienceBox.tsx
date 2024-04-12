@@ -1,4 +1,3 @@
-import React from "react";
 import { ExperienceBoxHeader } from "./ExperienceBoxHeader/ExperienceBoxHeader";
 import { ExperienceBullets } from "./ExperienceBullets/ExperienceBullets";
 import { ExperienceDates } from "./ExperienceDates/ExperienceDates";
@@ -14,6 +13,7 @@ interface Props {
   bullets: string[];
   timeframe: Timeframe;
   locations: string[];
+  isCurrent?: boolean;
 }
 
 export const ExperienceBox: React.FC<Props> = ({
@@ -25,6 +25,7 @@ export const ExperienceBox: React.FC<Props> = ({
   bullets,
   timeframe,
   locations,
+  isCurrent,
 }) => {
   return (
     <div className="flex max-h-max w-full flex-col gap-y-2 rounded-md text-body border  dark:border-zinc-600 p-4 text-xs">
@@ -34,6 +35,7 @@ export const ExperienceBox: React.FC<Props> = ({
         image={image}
         title={title}
         employer={employer}
+        isCurrent={isCurrent}
       />
       <ExperienceBullets bullets={bullets} />
       <div className="flex justify-between">

@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Image from "next/image";
+import { CurrrentTag } from "@/components/SHARED/CurrrentTag/CurrrentTag";
 
 interface Props {
   withArrow: boolean;
@@ -8,6 +9,7 @@ interface Props {
   image: string;
   title: string;
   employer: string;
+  isCurrent?: boolean;
 }
 
 export const ExperienceBoxHeader: React.FC<Props> = ({
@@ -16,9 +18,10 @@ export const ExperienceBoxHeader: React.FC<Props> = ({
   image,
   title,
   employer,
+  isCurrent = undefined,
 }) => {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between items-start">
       <div className="flex items-center gap-x-2">
         <div
           className={classNames(
@@ -29,12 +32,13 @@ export const ExperienceBoxHeader: React.FC<Props> = ({
           <Image src={`/${image}`} width={32} height={32} alt="flow" />
         </div>
         <div>
-          <h1 className="text-header text-[13px] font-haas tracking-wide">{title}</h1>
-          <h2 className="hover:text-indigo-500 hover:underline text-sub-header">
-            {employer}
-          </h2>
+          <h1 className="text-header text-[13px] font-haas tracking-wide">
+            {title}
+          </h1>
+          <h2 className="text-sub-header">{employer}</h2>
         </div>
       </div>
+      {isCurrent && <CurrrentTag hasPadding />}
     </div>
   );
 };

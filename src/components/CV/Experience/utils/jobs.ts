@@ -2,10 +2,10 @@ import { Jobs } from "@/types/types";
 
 export const jobs: Jobs = [
   {
-    title: "Engineering Lead",
+    title: "Lead Software Engineer",
     employer: "kulea - African Commodity Intelligence",
     image: "kulea.svg",
-    imageColorClass: "bg-gray-900",
+    imageColorClass: "bg-white border dark:border-none dark:bg-zinc-950",
     bullets: [
       "Founding engineer and tech lead for kulea, a seed-funded intelligence platform for African commodities.",
       "Overseeing product development and managing a team of engineers in Nairobi, Kenya.",
@@ -15,6 +15,7 @@ export const jobs: Jobs = [
     timeframe: { start: "2020-12" },
     contractType: ["Contract", "Part-time"],
     locations: ["Nairobi, Kenya", "Remote"],
+    isCurrent: true,
   },
   {
     title: "Data Visualisation Engineer & Designer",
@@ -28,7 +29,6 @@ export const jobs: Jobs = [
     contractType: ["Contract", "Full-time"],
     locations: ["Remote"],
   },
-
   {
     title: "Software Engineer",
     employer: "Supernova AI",

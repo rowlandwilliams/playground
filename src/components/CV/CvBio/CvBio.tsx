@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const CvBio = () => {
   return (
-    <div className="text-sm leading-5 pb-6 tracking-wider animate-fade-in-up space-y-2 font-haas dark:text-zinc-300 text-zinc-800">
+    <div className="text-sm leading-5 pb-8 tracking-wider animate-fade-in-up space-y-2 font-haas dark:text-zinc-300 text-zinc-800">
       <div>
         I am a technologist happiest at the intersection of creativity,
         analytics and innovation. I connect data, design and code with my

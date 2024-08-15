@@ -148,11 +148,13 @@ const getSourceOrDestinationNode = (
   rawFlowObj: RawFlow,
   directionKey: string
 ) => {
-  return nodes.filter(
+  const test = nodes.filter(
     (node) =>
       node.name === rawFlowObj[directionKey] &&
       node.directionKey === directionKey
   )[0].node;
+
+  return test;
 };
 
 // get sankey ready link object with correct source / target node ids and corresponding value

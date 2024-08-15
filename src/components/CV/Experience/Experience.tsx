@@ -1,4 +1,3 @@
-import React from "react";
 import { jobs } from "./utils/jobs";
 import { ExperienceBox } from "./ExperienceBox/ExperienceBox";
 import { Row } from "../SHARED/Row/Row";

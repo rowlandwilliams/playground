@@ -64,7 +64,6 @@ export const SankeyNode = ({
     : (x0 as number) - textXPadding;
   const textYCoordY = (y1 as number) - midPointY;
 
-  console.log(name);
   return (
     <g
       className="relative"
@@ -88,7 +87,7 @@ export const SankeyNode = ({
         x={nodeIsDestination ? x0 : (x1 as number) - borderRectWidth}
         y={y0}
         width={borderRectWidth}
-        height={(y1 as number) - (y0 as number)+25}
+        height={(y1 as number) - (y0 as number) + 25}
         className="fill-current text-gray-50 dark:text-zinc-900"
       ></rect>
       <text

@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import Image from "next/image";
 import { CurrrentTag } from "@/components/SHARED/CurrrentTag/CurrrentTag";
+import Link from "next/link";
 
 interface Props {
   withArrow: boolean;
@@ -9,6 +10,7 @@ interface Props {
   image: string;
   title: string;
   employer: string;
+  employerUrl?: string;
   isCurrent?: boolean;
 }
 
@@ -18,6 +20,7 @@ export const ExperienceBoxHeader: React.FC<Props> = ({
   image,
   title,
   employer,
+  employerUrl = undefined,
   isCurrent = undefined,
 }) => {
   return (
@@ -38,7 +41,14 @@ export const ExperienceBoxHeader: React.FC<Props> = ({
           <h2 className="text-sub-header">{employer}</h2>
         </div>
       </div>
-      {isCurrent && <CurrrentTag hasPadding />}
+      <div className="flex gap-2">
+        {isCurrent && <CurrrentTag hasPadding />}{" "}
+        {employerUrl && (
+          <div className="font-medium w-6 flex items-center text-sm justify-center h-6 hover:bg-zinc-100 text-zinc-600 dark:text-zinc-200 dark:hover:bg-zinc-600 rounded-md">
+            {"->"}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

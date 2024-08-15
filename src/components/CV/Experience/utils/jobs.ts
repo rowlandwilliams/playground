@@ -3,7 +3,7 @@ import { Jobs } from "@/types/types";
 export const jobs: Jobs = [
   {
     title: "Lead Software Engineer",
-    employer: "kulea - African Commodity Intelligence",
+    employer: "kulea - Africa's Commodity Intelligence Platform",
     image: "kulea.svg",
     imageColorClass: "bg-white border dark:border-none dark:bg-zinc-950",
     bullets: [
@@ -16,6 +16,7 @@ export const jobs: Jobs = [
     contractType: ["Contract", "Part-time"],
     locations: ["Nairobi, Kenya", "Remote"],
     isCurrent: true,
+    employerUrl: "https://www.kulea.com/",
   },
   {
     title: "Data Visualisation Engineer & Designer",
@@ -41,6 +42,7 @@ export const jobs: Jobs = [
     timeframe: { start: "2021-05", end: "2021-07" },
     contractType: ["Contract", "Full-time"],
     locations: ["Remote", "London, UK"],
+    employerUrl: "https://supernova.ai/",
   },
   {
     title: "Data Scientist & Visualisation Specialist",
@@ -54,5 +56,6 @@ export const jobs: Jobs = [
     timeframe: { start: "2017-10", end: "2018-04" },
     contractType: ["Full-time"],
     locations: ["Oxford, UK"],
+    employerUrl: "https://globalcanopy.org/",
   },
 ];

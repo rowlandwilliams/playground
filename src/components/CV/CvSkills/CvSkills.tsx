@@ -57,6 +57,7 @@ const padding = 2;
 export const CvSkills = () => {
   const { graphWidth, graphHeight, ref } = useResponsiveGraphDims();
   const root = hierarchy(data).sort((a, b) => (b.value || 0) - (a.value || 0));
+  const isMobile = graphWidth > 430;
 
   return (
     <div ref={ref} className="h-[430px] md:h-[235px]">
@@ -66,7 +67,7 @@ export const CvSkills = () => {
           size={[graphWidth, graphHeight]}
           tile={treemapBinary}
           round
-          paddingLeft={padding}
+          paddingLeft={isMobile ? padding : 0}
           paddingInner={padding}
           paddingRight={0}
           paddingOuter={0}
@@ -81,7 +82,7 @@ export const CvSkills = () => {
                   const nodeHeight = node.y1 - node.y0;
 
                   const isUi = node.parent?.data.data.id === "ui";
-                  const left = node.x0 + (isUi ? -padding * 2 : 0);
+                  const left = node.x0 + (isUi && isMobile ? -padding * 2 : 0);
 
                   return (
                     <Group key={`node-${i}`} top={node.y0} left={left}>
@@ -100,7 +101,7 @@ export const CvSkills = () => {
                           <text
                             x={8}
                             y={20}
-                            className="dark:fill-white font-haas text-sm"
+                            className="dark:fill-white fill-white font-haas text-sm"
                             fontSize={12}
                             textAnchor="start"
                           >

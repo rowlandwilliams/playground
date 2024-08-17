@@ -5,7 +5,7 @@ import { CvSkill } from "@/types/cv";
 import { Group } from "@visx/group";
 import { Treemap, hierarchy, stratify, treemapBinary } from "@visx/hierarchy";
 import classNames from "classnames";
-import skills from "./utils/skill.json";
+import { skills } from "./utils/utils";
 
 const treemapData = stratify<CvSkill>()
   .id((d) => d.id)
